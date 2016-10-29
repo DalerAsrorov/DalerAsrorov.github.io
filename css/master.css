@@ -4,7 +4,22 @@ html, body, ul, ol {
 
 body {
   font: Helvetica, sans-serif;
-  background: #bbb; }
+  background: #fff; }
+
+md-sidenav {
+  width: 15%;
+  height: 100%;
+  padding: 20px;
+  color: #fff;
+  background-color: #5c88bf; }
+
+md-content {
+  background-color: #fff;
+  height: 100%; }
+
+#mainpageWrapper {
+  background: #fff;
+  padding: 20px; }
 
 nav ul {
   margin: 0;

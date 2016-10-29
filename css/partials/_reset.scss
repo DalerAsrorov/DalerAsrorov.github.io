@@ -10,6 +10,27 @@ body
   background: $basecolor;
 }
 
+md-sidenav
+{
+  width: 15%;
+  height:100%;
+  padding:20px;
+  color: $lighttext;
+  background-color: $mastercolor;
+}
+
+md-content
+{
+  background-color: $basecolor;
+  height:100%;
+}
+
+#mainpageWrapper
+{
+  background: $basecolor;
+  padding:20px;
+}
+
 nav
 {
   ul
