@@ -1,5 +1,5 @@
 angular
-  .module('app', ['ngRoute'])
+  .module('app', ['ngRoute', 'ngMaterial'])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
