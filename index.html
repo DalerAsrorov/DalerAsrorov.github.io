@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/master.css" media="screen">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" media="screen">
     <title> Daler Asrorov </title>
   </head>
   <body>
-    <a href="csci490"> CSCI 490 </a>
+
+    <div ng-view class="parent-container"></div>
+
+    <script src="/bower_components/angular/angular.js" charset="utf-8"></script>
+    <script src="/bower_components/angular-route/angular-route.js" charset="utf-8"></script>
+    <script src="/bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
+    <script src="/js/main.js" charset="utf-8"></script>
+    <script src="/js/controllers/mainpage.js" charset="utf-8"></script>
+    <script src="/js/controllers/projects.js" charset="utf-8"></script>
+    <script src="/js/controllers/share.js" charset="utf-8"></script>
   </body>
 </html>
