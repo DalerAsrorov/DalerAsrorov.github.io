@@ -1,18 +1,20 @@
 angular
-  .module('app', ['ngRoute', 'ngMaterial'])
-  .config(function($routeProvider) {
-    $routeProvider
-      .when('/', {
+  .module('app', ['ui.router', 'ngMaterial'])
+  .config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/main');
+
+    $stateProvider
+      .state('main', {
+        url: '/main',
         templateUrl: '/templates/index.html',
         controller: 'MainPageCtrl',
         controllerAs: 'vm'
       })
-      .when('/projects', {
+      .state('projects', {
+        url: '/projects',
         templateUrl: '/templates/projects.html',
         controller: 'ProjectsCtrl',
         controllerAs: 'vm'
       })
-      .otherwise({
-        redirectTo: '/'
-      });
+
   });
