@@ -14,30 +14,30 @@
       <div id="navListHolder">
         <ul class="list-group">
           <li class="list-group-item nav-item">
-            <a href="#/main" class="nav-link">
+            <a ui-sref="main" class="nav-link">
               <md-button class="nav-button">
-                Main
+                <span class="nav-span">Main</span>
               </md-button>
             </a>
           </li>
           <li class="list-group-item nav-item">
-            <a href="#/projects" class="nav-link">
+            <a ui-sref="projects" class="nav-link">
               <md-button class="nav-button">
-                Projects
+                <span class="nav-span">Projects</span>
               </md-button>
             </a>
           </li>
           <li class="list-group-item nav-item">
-            <a href="#/main" class="nav-link">
+            <a ui-sref="news" class="nav-link">
               <md-button class="nav-button">
-                Main
+                <span class="nav-span">News</span>
               </md-button>
             </a>
           </li>
           <li class="list-group-item nav-item">
-            <a href="#/main" class="nav-link">
+            <a ui-href="main" class="nav-link">
               <md-button class="nav-button">
-                Main
+                <span class="nav-span">Social</span>
               </md-button>
             </a>
           </li>
@@ -46,7 +46,7 @@
     </md-sidenav>
 
     <md-content flex layout="column">
-      <div ui-view></div>
+      <ui-view></ui-view>
     </md-content>
 
     <script src="/bower_components/angular/angular.js" charset="utf-8"></script>
@@ -57,6 +57,7 @@
     <script src="/bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.js" charset="utf-8"></script>
     <script src="/js/main.js" charset="utf-8"></script>
+    <script src="/js/nav.js" charset="utf-8"></script>
     <script src="/js/controllers/mainpage.js" charset="utf-8"></script>
     <script src="/js/controllers/projects.js" charset="utf-8"></script>
     <script src="/js/controllers/share.js" charset="utf-8"></script>
