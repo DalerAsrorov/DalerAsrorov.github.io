@@ -7,37 +7,12 @@
     </div>
     <div class="content-bottom">
       <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-        <a ng-repeat="item in vm.tooltipList" href="{{item.url}}" >
+        <a target="_blank" ng-repeat="item in vm.tooltipList" href="{{item.url}}" >
           <md-button class="md-fab custom-button" aria-label="{{item.name}}">
-              <ng-md-icon class="custom-icon" icon="{{item.icon}}" size="40"></ng-md-icon>
+            <ng-md-icon class="custom-icon" icon="{{item.icon}}" size="40"></ng-md-icon>
           </md-button>
         </a>
-
-        <!-- <a href="#">
-        <md-button class="md-fab custom-button" aria-label="Github">
-            <ng-md-icon class="custom-icon" icon="github-circle" size="40"></ng-md-icon>
-        </md-button>
-        </a>
-
-        <a href="#">
-        <md-button class="md-fab custom-button" aria-label="Twitter">
-            <ng-md-icon class="custom-icon" icon="twitter" size="40"></ng-md-icon>
-        </md-button>
-        </a>
-
-        <a href="#">
-        <md-button class="md-fab custom-button" aria-label="Email">
-            <ng-md-icon class="custom-icon" icon="email" size="40"></ng-md-icon>
-        </md-button>
-        </a>
-
-        <a href="#">
-          <md-button class="md-fab custom-button" aria-label="Resume">
-              <ng-md-icon class="custom-icon" icon="attachment" size="40"></ng-md-icon>
-          </md-button>
-        </a> -->
     </section>
-
     </div>
   </div>
 </md-content>
