@@ -43,8 +43,6 @@ angular
       displayString();
     }
 
-
-
     function displayString() {
       $(".typed-cursor").remove();
       $("#animatedText").remove();
@@ -52,20 +50,48 @@ angular
     }
 
 
-    requestTooltipJson(function(result) {
-      console.log(result);
-      vm.tooltipList = result.data;
-    });
+    vm.tooltipList = [
+      {
+        "name": "LinkedIn",
+        "icon": "linkedin",
+        "url": "https://www.linkedin.com/in/dalerasrorov"
+      },
+      {
+        "name": "Github",
+        "icon": "github-circle",
+        "url": "https://github.com/DalerAsrorov"
+      },
+      {
+        "name": "Twitter",
+        "icon": "twitter",
+        "url": "https://twitter.com/_dafiasco_"
+      },
+      {
+        "name": "Email",
+        "icon": "email",
+        "url": "mailto:asrorov@usc.edu"
+      },
+      {
+        "name": "Resume",
+        "icon": "attachment",
+        "url": "/assets/docs/resume.pdf"
+      }
+    ];
 
-    function requestTooltipJson(callback) {
-      $.ajax({
-        url: "/assets/json/tooltips.json",
-        contentType: "application/json",
-        dataType: "json",
-        success: function(result) {
-          callback(jQuery.parseJSON(JSON.stringify(result)));
-        }
-      });
-    }
+    // requestTooltipJson(function(result) {
+    //   console.log(result);
+    //   vm.tooltipList = result.data;
+    // });
+
+    // function requestTooltipJson(callback) {
+    //   $.ajax({
+    //     url: "/assets/json/tooltips.json",
+    //     contentType: "application/json",
+    //     dataType: "json",
+    //     success: function(result) {
+    //       callback(jQuery.parseJSON(JSON.stringify(result)));
+    //     }
+    //   });
+    // }
 
   });
