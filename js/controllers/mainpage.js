@@ -5,9 +5,9 @@ angular
     vm.tooltipList = [];
     var visited = window.localStorage.getItem("visited");
 
-    // window.addEventListener("beforeunload", function (e) {
-    //   window.localStorage.clear();
-    // });
+    window.addEventListener("beforeunload", function (e) {
+      window.localStorage.removeItem("visited");
+    });
 
 
     var sentenceList =
