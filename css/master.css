@@ -1,3 +1,4 @@
+/* Mixin */
 html, body, ul, ol {
   margin: 0;
   padding: 0; }
@@ -5,6 +6,17 @@ html, body, ul, ol {
 body {
   font: Helvetica, sans-serif;
   background: #fff; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+nav li {
+  display: inline-block; }
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none; }
 
 md-sidenav {
   width: 15%;
@@ -24,23 +36,15 @@ md-content {
 #navListHolder {
   /* future styles */ }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-nav li {
-  display: inline-block; }
-nav a {
-  display: block;
-  padding: 6px 12px;
-  text-decoration: none; }
-
 .md-button.nav-button:not([disabled]):hover {
   background-color: rgba(255, 255, 255, 0.87);
   color: #5c88bf; }
 
 .md-button.md-no-style {
   padding: 0; }
+
+.ng-scope {
+  height: 100%; }
 
 li.list-group-item.nav-item {
   padding: 0;
@@ -72,6 +76,19 @@ li.nav-button:not(.first-nav) {
   border-top: none; }
 
 .content {
-  padding: 15px; }
+  padding: 15px;
+  width: 40%;
+  margin: 0 auto;
+  height: 400px;
+  background: green;
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.main-md-content {
+  height: 100%; }
 
 /*# sourceMappingURL=master.css.map */

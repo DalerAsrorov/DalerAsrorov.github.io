@@ -8,7 +8,7 @@ angular
     $stateProvider
       .state('main', {
         url: '/main',
-        templateUrl: '/templates/index.html',
+        templateUrl: '/templates/main.html',
         controller: 'MainPageCtrl',
         controllerAs: 'vm'
       })

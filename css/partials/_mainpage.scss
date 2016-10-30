@@ -1,4 +1,15 @@
 .content
 {
   padding: 15px;
+  width: 40%;
+  margin: 0 auto;
+  height: 400px;
+  background: green;
+  border-radius: 50%;
+  @include vertical-align();
+}
+
+.main-md-content
+{
+    height: 100%;
 }
