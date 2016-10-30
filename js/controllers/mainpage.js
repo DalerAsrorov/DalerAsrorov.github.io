@@ -24,8 +24,8 @@ angular
     if(!visited) {
       console.log("not yet visited");
       $(function() {
+        window.localStorage.setItem("visited", true);
         $("#animatedText").typed({
-          window.localStorage.setItem("visited", true);
           strings: sentenceList,
           typedSpeed: 0,
           // show cursor
