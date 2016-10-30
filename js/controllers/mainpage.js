@@ -3,6 +3,39 @@ angular
   .controller('MainPageCtrl', function() {
     var vm = this;
     vm.tooltipList = [];
+    var sentenceList =
+    [
+      "Hello. ^400 I am Daler.",
+      "I'm a full-stack engineer...",
+      "...^1000a technology enthusiast.",
+      "...^1000a big fan of space.",
+      "I truly believe you're in ^500 the right place.",
+      ":) ^1000",
+      "Enjoy!"
+    ];
+
+
+    $(function() {
+      $("#animatedText").typed({
+        strings: sentenceList,
+        typedSpeed: 0,
+        // show cursor
+        showCursor: true,
+        // character for cursor
+        cursorChar: "|",
+        loopCount: false,
+        callback: function() {
+          setTimeout(displayString, 5000);
+        }
+      });
+    });
+
+    function displayString() {
+      $(".typed-cursor").remove();
+      $("#animatedText").remove();
+      $("#nameDiv").fadeIn("slow");
+    }
+
 
     requestTooltipJson(function(result) {
       console.log(result);

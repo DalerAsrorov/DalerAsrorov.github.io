@@ -9,6 +9,51 @@
   box-shadow: 3px 4px 39px -6px rgba(0,0,0,1);
 }
 
+#nameDiv
+{
+  @extend .content-wrapper;
+  @extend .content-intro;
+}
+
+.typed-cursor
+{
+    opacity: 1;
+    -webkit-animation: blink 0.8s infinite;
+    -moz-animation: blink 0.8s infinite;
+    animation: blink 0.8s infinite;
+    font-size: $animatedtextfont;
+}
+
+.content-wrapper
+{
+  width: 100%;
+  display: block;
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+@keyframes blink
+{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes blink
+{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-moz-keyframes blink
+{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
 .content
 {
   width: 45%;
@@ -17,6 +62,13 @@
   background: $basecolor;
   // @include vertical-align();
   margin-top: 120px;
+}
+
+.content-intro
+{
+  font-size: $animatedtextfont;
+  display: inline;
+  color: $animatedtextcolor;
 }
 
 .content-bottom
@@ -29,6 +81,11 @@
 .main-md-content
 {
     height: 100%;
+}
+
+.content-image
+{
+  margin-top: 15px;
 }
 
 .content-image-wrapper
