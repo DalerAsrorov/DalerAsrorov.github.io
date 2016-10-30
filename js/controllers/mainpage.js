@@ -25,6 +25,7 @@ angular
       console.log("not yet visited");
       $(function() {
         $("#animatedText").typed({
+          window.localStorage.setItem("visited", true);
           strings: sentenceList,
           typedSpeed: 0,
           // show cursor
@@ -34,7 +35,6 @@ angular
           loopCount: false,
           callback: function() {
             setTimeout(displayString, 5000);
-            window.localStorage.setItem("visited", true);
           }
         });
       });
