@@ -11,8 +11,6 @@ angular
     function requestTooltipJson(callback) {
       $.ajax({
         url: "/assets/json/tooltips.json",
-        contentType: "application/json",
-        cache: false,
         dataType: "json",
         success: function(result) {
           callback(result);
