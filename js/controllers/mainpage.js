@@ -5,6 +5,7 @@ angular
     vm.tooltipList = [];
 
     requestTooltipJson(function(result) {
+      console.log(result);
       vm.tooltipList = result.data;
     });
 

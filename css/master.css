@@ -112,5 +112,10 @@ li.nav-button:not(.first-nav) {
     color: #5c88bf; }
   .md-button.md-fab.custom-button:hover > .custom-icon {
     fill: #5c88bf; }
+  .md-button.md-fab.custom-button:focus {
+    background: #5c88bf;
+    color: #fff; }
+  .md-button.md-fab.custom-button:focus > .custom-icon {
+    fill: #fff; }
 
 /*# sourceMappingURL=master.css.map */

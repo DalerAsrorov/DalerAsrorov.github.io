@@ -56,4 +56,13 @@
   {
     fill: $mastercolor;
   }
+  &:focus
+  {
+    background: $mastercolor;
+    color: $basecolor;
+  }
+  &:focus > .custom-icon
+  {
+    fill: $basecolor;
+  }
 }
