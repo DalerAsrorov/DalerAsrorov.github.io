@@ -69,8 +69,7 @@ a.nav-link {
   color: #fff;
   border: none;
   border-radius: 0;
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff; }
+  font-weight: 600; }
 
 li.nav-button:not(.first-nav) {
   border-top: none; }
@@ -92,7 +91,6 @@ li.nav-button:not(.first-nav) {
 
 .content-bottom {
   height: 100px;
-  background: blue;
   margin-top: 10px;
   padding: 10px; }
 
@@ -101,5 +99,18 @@ li.nav-button:not(.first-nav) {
 
 .content-image-wrapper {
   text-align: center; }
+
+.custom-icon {
+  position: relative;
+  top: 7px;
+  fill: #fff; }
+
+.md-button.md-fab.custom-button {
+  background: #5c88bf; }
+  .md-button.md-fab.custom-button:hover {
+    background: #fff;
+    color: #5c88bf; }
+  .md-button.md-fab.custom-button:hover > .custom-icon {
+    fill: #5c88bf; }
 
 /*# sourceMappingURL=master.css.map */
