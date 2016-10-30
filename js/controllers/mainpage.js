@@ -11,9 +11,10 @@ angular
     function requestTooltipJson(callback) {
       $.ajax({
         url: "/assets/json/tooltips.json",
+        contentType: "application/json",
         dataType: "json",
         success: function(result) {
-          callback(result);
+          callback(jQuery.parseJSON(JSON.stringify(result)));
         }
       });
     }
