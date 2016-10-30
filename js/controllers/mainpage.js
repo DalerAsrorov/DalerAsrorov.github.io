@@ -5,6 +5,11 @@ angular
     vm.tooltipList = [];
     var visited = window.localStorage.getItem("visited");
 
+    window.addEventListener("beforeunload", function (e) {
+      window.localStorage.clear();
+    });
+
+
     var sentenceList =
     [
       "Hello. ^400 I am Daler.",
