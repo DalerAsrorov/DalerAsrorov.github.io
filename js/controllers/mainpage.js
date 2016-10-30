@@ -34,7 +34,7 @@ angular
           cursorChar: "|",
           loopCount: false,
           callback: function() {
-            setTimeout(displayString, 5000);
+            setTimeout(displayString, 3000);
           }
         });
       });
