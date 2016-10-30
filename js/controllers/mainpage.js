@@ -3,6 +3,8 @@ angular
   .controller('MainPageCtrl', function() {
     var vm = this;
     vm.tooltipList = [];
+    var visited = window.localStorage.getItem("visited");
+
     var sentenceList =
     [
       "Hello. ^400 I am Daler.",
@@ -14,21 +16,29 @@ angular
       "Enjoy!"
     ];
 
-
-    $(function() {
-      $("#animatedText").typed({
-        strings: sentenceList,
-        typedSpeed: 0,
-        // show cursor
-        showCursor: true,
-        // character for cursor
-        cursorChar: "|",
-        loopCount: false,
-        callback: function() {
-          setTimeout(displayString, 5000);
-        }
+    if(!visited) {
+      console.log("not yet visited");
+      $(function() {
+        $("#animatedText").typed({
+          strings: sentenceList,
+          typedSpeed: 0,
+          // show cursor
+          showCursor: true,
+          // character for cursor
+          cursorChar: "|",
+          loopCount: false,
+          callback: function() {
+            setTimeout(displayString, 5000);
+            window.localStorage.setItem("visited", true);
+          }
+        });
       });
-    });
+    } else if (visited) {
+      console.log("already visited");
+      displayString();
+    }
+
+
 
     function displayString() {
       $(".typed-cursor").remove();
