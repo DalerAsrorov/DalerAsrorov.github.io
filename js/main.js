@@ -1,5 +1,7 @@
 angular
   .module('app', ['ui.router', 'ngMaterial'])
+
+  // routing
   .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/main');
 
