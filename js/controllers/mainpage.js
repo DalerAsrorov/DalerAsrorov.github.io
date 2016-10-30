@@ -10,7 +10,7 @@ angular
 
     function requestTooltipJson(callback) {
       $.ajax({
-        url: "/assets/json/tooltips.json",
+        url: "assets/json/tooltips.json",
         cache: false,
         success: function(result) {
           var json = JSON.parse(result);
