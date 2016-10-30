@@ -1,9 +1,12 @@
 #profileImg
 {
-  width: 50%;
-  height: 50%;
+  width: 60%;
+  height: 60%;
   border-radius: 50%;
   border: 10px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 3px 4px 39px -6px rgba(0,0,0,1);
+  -moz-box-shadow: 3px 4px 39px -6px rgba(0,0,0,1);
+  box-shadow: 3px 4px 39px -6px rgba(0,0,0,1);
 }
 
 .content
@@ -14,6 +17,14 @@
   background: #fff;
   // @include vertical-align();
   margin-top: 120px;
+}
+
+.content-bottom
+{
+  height: 100px;
+  background: blue;
+  margin-top: 10px;
+  padding: 10px;
 }
 
 .main-md-content
