@@ -14,7 +14,7 @@ md-sidenav
 {
   width: 15%;
   height: 100%;
-  padding: 20px;
+  padding:20px;
   color: $lighttext;
   background-color: $mastercolor;
 }
@@ -96,4 +96,11 @@ a.nav-link
   color: #fff;
   border: none;
   border-radius: 0;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+}
+
+li.nav-button:not(.first-nav)
+{
+  border-top: none;
 }

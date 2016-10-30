@@ -64,7 +64,12 @@ a.nav-link {
   background: #5c88bf;
   color: #fff;
   border: none;
-  border-radius: 0; }
+  border-radius: 0;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff; }
+
+li.nav-button:not(.first-nav) {
+  border-top: none; }
 
 .content {
   padding: 15px; }
