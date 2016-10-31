@@ -1,0 +1,35 @@
+.project-icon
+{
+  position: relative;
+  bottom: 3px;
+  right: 2px;
+  fill: $basecolor;
+}
+
+.project-card
+{
+  
+}
+
+.project-icon-button
+{
+  background: $dark;
+
+  &:hover
+  {
+    background: $basecolor;
+  }
+  &:hover > .project-icon
+  {
+    fill: $dark;
+  }
+  &:focus
+  {
+    background: $dark;
+    color: $basecolor;
+  }
+  &:focus > .project-icon
+  {
+    fill: $dark;
+  }
+}

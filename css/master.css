@@ -74,6 +74,24 @@ a.nav-link {
 li.nav-button:not(.first-nav) {
   border-top: none; }
 
+.project-icon {
+  position: relative;
+  bottom: 3px;
+  right: 2px;
+  fill: #fff; }
+
+.project-icon-button {
+  background: #29282d; }
+  .project-icon-button:hover {
+    background: #fff; }
+  .project-icon-button:hover > .project-icon {
+    fill: #29282d; }
+  .project-icon-button:focus {
+    background: #29282d;
+    color: #fff; }
+  .project-icon-button:focus > .project-icon {
+    fill: #29282d; }
+
 #profileImg {
   width: 60%;
   height: 60%;

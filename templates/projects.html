@@ -1,5 +1,29 @@
-<md-content flex layout="column">
-  <div class="content">
-    Projects page.
+<md-content flex layout-xs="column" layout="row" class="md-padding main-md-content">
+  <div flex-xs flex-gt-xs="50" layout="column" class="content-projects">
+    <md-card class="project-card">
+        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Icon action buttons</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+          </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button project-icon-button" aria-label="Favorite">
+            <ng-md-icon class="project-icon" icon="twitter" size="30"></ng-md-icon>
+          </md-button>
+          <md-button class="md-icon-button project-icon-button" aria-label="Settings">
+            <ng-md-icon class="project-icon" icon="twitter" size="30"></ng-md-icon>
+          </md-button>
+          <md-button class="md-icon-button project-icon-button" aria-label="Share">
+            <ng-md-icon class="project-icon" icon="twitter" size="30"></ng-md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
   </div>
 </md-content>

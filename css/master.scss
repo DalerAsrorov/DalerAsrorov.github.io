@@ -8,6 +8,8 @@ $bold: 600;
 $navfont: 16pt;
 $animatedtextfont: 20pt;
 $animatedtextcolor: #dadada;
+$contentpadding: 15px;
+$dark: #29282d;
 
 /* Mixin */
 @mixin vertical-align($position: relative)
@@ -20,5 +22,5 @@ $animatedtextcolor: #dadada;
 }
 
 @import 'partials/_reset';
-@import 'partials/_mainpage';
 @import 'partials/_projects';
+@import 'partials/_mainpage';
