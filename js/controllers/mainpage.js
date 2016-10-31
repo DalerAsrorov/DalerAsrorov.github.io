@@ -17,7 +17,7 @@ angular
       "...^1000a technology enthusiast.",
       "...^1000a big fan of space.",
       "I truly believe you're in ^500 the right place.",
-      ":) ^1000",
+      "I built this website from scratch! :) ^1000",
       "Enjoy!"
     ];
 
