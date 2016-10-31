@@ -1,29 +1,33 @@
-<md-content flex layout-xs="column" layout="row" class="md-padding main-md-content">
-  <div flex-xs flex-gt-xs="50" layout="column" class="content-projects">
-    <md-card class="project-card">
-        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
+<md-content flex layout-xs="column" layout="column" class="md-padding main-md-content">
+  <div class="content-projects row">
+    <div class="grid-holder">
+      <md-card class="project-card col-lg-3" ng-repeat="item in vm.projectsList">
+        <img ng-src="{{item.imgUrl}}" class="md-card-image project-image" alt="{{img.name}}">
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline">Icon action buttons</span>
+            <span class="md-headline">{{item.name}}</span>
           </md-card-title-text>
         </md-card-title>
         <md-card-content>
           <p>
-            The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-            two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+            {{item.description | limitTo:100}} ...
           </p>
         </md-card-content>
         <md-card-actions layout="row" layout-align="end center">
+          <a href="{{item.github}}" target="_blank">
+            <md-button class="md-icon-button project-icon-button" aria-label="{{item.github}}">
+              <ng-md-icon class="project-icon" icon="github" size="30"></ng-md-icon>
+            </md-button>
+          </a>
+          <a ng-href="{{item.link}}" target="_blank">
+            <md-button class="md-icon-button project-icon-button" aria-label="{{item.link}}">
+              <ng-md-icon class="project-icon" icon="visibility" size="30"></ng-md-icon>
+            </md-button>
+          </a>
           <md-button class="md-icon-button project-icon-button" aria-label="Favorite">
-            <ng-md-icon class="project-icon" icon="twitter" size="30"></ng-md-icon>
+            <ng-md-icon class="project-icon" icon="more_horiz" size="30"></ng-md-icon>
           </md-button>
-          <md-button class="md-icon-button project-icon-button" aria-label="Settings">
-            <ng-md-icon class="project-icon" icon="twitter" size="30"></ng-md-icon>
-          </md-button>
-          <md-button class="md-icon-button project-icon-button" aria-label="Share">
-            <ng-md-icon class="project-icon" icon="twitter" size="30"></ng-md-icon>
-          </md-button>
-        </md-card-actions>
       </md-card>
+    </div>
   </div>
 </md-content>

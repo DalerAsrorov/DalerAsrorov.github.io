@@ -68,8 +68,7 @@ a.nav-link {
   background: #5c88bf;
   color: #fff;
   border: none;
-  border-radius: 0;
-  font-weight: 600; }
+  border-radius: 0; }
 
 li.nav-button:not(.first-nav) {
   border-top: none; }
@@ -77,7 +76,7 @@ li.nav-button:not(.first-nav) {
 .project-icon {
   position: relative;
   bottom: 3px;
-  right: 2px;
+  right: 3px;
   fill: #fff; }
 
 .project-icon-button {
@@ -91,6 +90,23 @@ li.nav-button:not(.first-nav) {
     color: #fff; }
   .project-icon-button:focus > .project-icon {
     fill: #29282d; }
+
+.content-projects, .grid-holder {
+  height: 100%;
+  overflow: auto; }
+
+.grid-holder {
+  width: 90%;
+  margin: 0 auto; }
+
+.project-card {
+  margin: 0;
+  padding: 0;
+  height: 420px;
+  margin-bottom: 15px; }
+
+.project-image {
+  height: 230px; }
 
 #profileImg {
   width: 60%;

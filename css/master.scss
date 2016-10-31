@@ -10,6 +10,7 @@ $animatedtextfont: 20pt;
 $animatedtextcolor: #dadada;
 $contentpadding: 15px;
 $dark: #29282d;
+$gridheight: 420px;
 
 /* Mixin */
 @mixin vertical-align($position: relative)
@@ -19,6 +20,12 @@ $dark: #29282d;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+@mixin zero-margin-padding($value: 0)
+{
+  margin: $value;
+  padding: $value;
 }
 
 @import 'partials/_reset';

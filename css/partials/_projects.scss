@@ -2,13 +2,13 @@
 {
   position: relative;
   bottom: 3px;
-  right: 2px;
+  right: 3px;
   fill: $basecolor;
 }
 
 .project-card
 {
-  
+
 }
 
 .project-icon-button
@@ -32,4 +32,30 @@
   {
     fill: $dark;
   }
+}
+
+.content-projects
+{
+  height: 100%;
+  overflow: auto;
+
+}
+
+.grid-holder
+{
+  @extend .content-projects;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.project-card
+{
+  @include zero-margin-padding();
+  height: $gridheight;
+  margin-bottom: 15px;
+}
+
+.project-image
+{
+  height: 230px;
 }
