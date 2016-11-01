@@ -205,3 +205,23 @@
     font-style: italic;
   }
 }
+
+.lead
+{
+  font-weight: $bold;
+  font-size: $normalfont;
+}
+
+.modal-image
+{
+  @include horizontal-align();
+  margin: auto;
+  max-width: 100%;
+  width: 50%;
+  height: 300px;
+}
+
+.modal-text
+{
+  margin-top: 15px;
+}

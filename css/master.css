@@ -219,6 +219,22 @@ li.nav-button:not(.first-nav) {
   color: #928e8e;
   font-style: italic; }
 
+.lead {
+  font-weight: 600;
+  font-size: 12pt; }
+
+.modal-image {
+  float: none;
+  display: block;
+  margin: 0 auto;
+  margin: auto;
+  max-width: 100%;
+  width: 50%;
+  height: 300px; }
+
+.modal-text {
+  margin-top: 15px; }
+
 #profileImg {
   width: 60%;
   height: 60%;

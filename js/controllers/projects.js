@@ -90,7 +90,7 @@ angular
 
     function DialogController($mdDialog, dataToPass) {
       var vm = this;
-      console.log(dataToPass);
+      vm.project = dataToPass.data;
 
       vm.hide = function() {
         $mdDialog.hide();
@@ -122,7 +122,7 @@ angular
           obj = el;
         }
       });
-      
+
       $mdDialog.show({
          locals: { dataToPass: {"data": obj} },
          controller: DialogController,
