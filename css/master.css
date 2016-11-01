@@ -204,6 +204,18 @@ li.nav-button:not(.first-nav) {
 .card-actions {
   margin-bottom: 15px; }
 
+.card-description {
+  padding-bottom: 5px; }
+
+.actions-wrapper {
+  float: none;
+  display: block;
+  margin: 0 auto; }
+
+.card-description p {
+  color: #928e8e;
+  font-style: italic; }
+
 #profileImg {
   width: 60%;
   height: 60%;

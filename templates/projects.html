@@ -8,25 +8,27 @@
             <span class="md-headline">{{item.name}}</span>
           </md-card-title-text>
         </md-card-title>
-        <md-card-content>
+        <md-card-content class="card-description">
           <p>
             {{item.description | limitTo:80}} ...
           </p>
         </md-card-content>
         <md-card-actions class="card-actions" layout="row" layout-align="end center">
-          <a href="{{item.github}}" target="_blank">
-            <md-button class="md-icon-button project-icon-button" aria-label="{{item.github}}">
-              <ng-md-icon class="project-icon" icon="github-circle" size="30"></ng-md-icon>
+          <div class="actions-wrapper">
+            <a href="{{item.github}}" target="_blank">
+              <md-button class="md-icon-button project-icon-button" aria-label="{{item.github}}">
+                <ng-md-icon class="project-icon" icon="github-circle" size="30"></ng-md-icon>
+              </md-button>
+            </a>
+            <a ng-href="{{item.link}}" target="_blank">
+              <md-button class="md-icon-button project-icon-button" aria-label="{{item.link}}">
+                <ng-md-icon class="project-icon" icon="visibility" size="30"></ng-md-icon>
+              </md-button>
+            </a>
+            <md-button class="md-icon-button project-icon-button" aria-label="Favorite">
+              <ng-md-icon class="project-icon" icon="more_horiz" size="30"></ng-md-icon>
             </md-button>
-          </a>
-          <a ng-href="{{item.link}}" target="_blank">
-            <md-button class="md-icon-button project-icon-button" aria-label="{{item.link}}">
-              <ng-md-icon class="project-icon" icon="visibility" size="30"></ng-md-icon>
-            </md-button>
-          </a>
-          <md-button class="md-icon-button project-icon-button" aria-label="Favorite">
-            <ng-md-icon class="project-icon" icon="more_horiz" size="30"></ng-md-icon>
-          </md-button>
+          </div>
       </md-card>
     </div>
   </div>

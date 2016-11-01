@@ -11,6 +11,7 @@ $animatedtextcolor: #dadada;
 $contentpadding: 15px;
 $dark: #29282d;
 $gridheight: 420px;
+$lightgrey: #928e8e;
 
 /* Mixin */
 @mixin vertical-align($position: relative)
@@ -28,6 +29,12 @@ $gridheight: 420px;
   padding: $value;
 }
 
+@mixin horizontal-align()
+{
+  float: none;
+  display: block;
+  margin: 0 auto;
+}
 
 @import 'partials/_reset';
 @import 'partials/_projects';

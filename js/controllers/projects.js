@@ -19,7 +19,7 @@ angular
       {
         name: "LiveToShare",
         type: "Web",
-        imgUrl: imgBaseUrl + "livetoshare.jpeg",
+        imgUrl: imgBaseUrl + "livetoshare.png",
         description: "Final project for the Database Web Development class. Application that allows sharing of stories through media.",
         role: "Lead developer",
         stack: "AngularJS, PHP, JQuery, HTML/CSS, Firebase",
@@ -89,5 +89,5 @@ angular
     ];
 
 
-    
+
 });

@@ -182,3 +182,22 @@
 {
   margin-bottom: 15px;
 }
+
+.card-description
+{
+  padding-bottom: 5px;
+}
+
+.actions-wrapper
+{
+  @include horizontal-align();
+}
+
+.card-description
+{
+  p {
+    color: $lightgrey;
+    font-style: italic;
+  }
+
+}
