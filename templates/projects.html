@@ -21,11 +21,11 @@
               </md-button>
             </a>
             <a ng-href="{{item.link}}" target="_blank">
-              <md-button class="md-icon-button project-icon-button" aria-label="{{item.link}}">
+              <md-button  class="md-icon-button project-icon-button" aria-label="{{item.link}}">
                 <ng-md-icon class="project-icon" icon="visibility" size="30"></ng-md-icon>
               </md-button>
             </a>
-            <md-button ng-click="vm.showAdvanced($event)" class="md-icon-button project-icon-button" aria-label="Favorite">
+            <md-button data="{{item.name}}" ng-click="vm.showAdvanced($event)" class="md-icon-button project-icon-button" aria-label="Favorite">
               <ng-md-icon class="project-icon" icon="more_horiz" size="30"></ng-md-icon>
             </md-button>
           </div>

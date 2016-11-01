@@ -88,9 +88,10 @@ angular
       },
     ];
 
-    function DialogController($mdDialog) {
+    function DialogController($mdDialog, dataToPass) {
       var vm = this;
-      vm.name ="name";
+      console.log(dataToPass);
+
       vm.hide = function() {
         $mdDialog.hide();
       };
@@ -106,8 +107,24 @@ angular
 
     }
 
+    function getProjectObj(name) {
+      console.log("passed name", name);
+
+    };
+
     vm.showAdvanced = function(ev) {
-       $mdDialog.show({
+      var currTarget = ev.currentTarget;
+      var projectName = currTarget.getAttribute("data");
+      var obj = {};
+
+      vm.projectsList.forEach(function(el) {
+        if(projectName.toLowerCase() === el.name.toLowerCase()) {
+          obj = el;
+        }
+      });
+      
+      $mdDialog.show({
+         locals: { dataToPass: {"data": obj} },
          controller: DialogController,
          controllerAs: "vm",
          templateUrl: '/templates/dialog.html',
@@ -115,14 +132,14 @@ angular
          targetEvent: ev,
          clickOutsideToClose: true,
          fullscreen: false // Only for -xs, -sm breakpoints.
-       })
-       .then(function(answer) {
+      })
+      .then(function(answer) {
          vm.status = 'You said the information was "' + answer + '".';
          console.log(vm.status);
-       }, function() {
+      }, function() {
          vm.status = 'You cancelled the dialog.';
          console.log(vm.status);
-       });
+      });
     };
 
 
