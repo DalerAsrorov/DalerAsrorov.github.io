@@ -107,9 +107,8 @@ li.nav-button:not(.first-nav) {
 .project-card {
   margin: 0;
   padding: 0;
-  height: 420px;
-  margin-bottom: 10px;
-  height: 400px; }
+  height: 390px;
+  margin-bottom: 10px; }
 
 .project-image {
   height: 230px; }

@@ -17,7 +17,7 @@ angular
         type: "Mobile",
         status: statuses.complete,
         imgUrl: imgBaseUrl + "uniket.png",
-        description: "iOS mobile application that allows, students to sell, buy, and make transaction within specific radius and type.",
+        description: "iOS mobile application that allows students to sell, buy, and make transaction within specific radius and type.",
         role: "Software developer",
         stack: "Objective-C, Cocoa Touch, Firebase",
         "github": "",
