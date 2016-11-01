@@ -1,14 +1,19 @@
+@media(max-width: 767px)
+{
+  .project-card
+  {
+    float: none;
+    display: block;
+    margin: auto;
+  }
+}
+
 .project-icon
 {
   position: relative;
   bottom: 3px;
   right: 3px;
   fill: $basecolor;
-}
-
-.project-card
-{
-
 }
 
 .project-icon-button
@@ -53,9 +58,127 @@
   @include zero-margin-padding();
   height: $gridheight;
   margin-bottom: 10px;
+  height: 400px;
 }
 
 .project-image
 {
   height: 230px;
+}
+
+.card-fade {
+    opacity: 1;
+}
+
+.ng-enter,
+.ng-leave,
+.ng-move {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  position:relative;
+}
+
+.ng-enter {
+  left:-10px;
+  opacity:0;
+}
+.ng-enter.ng-enter-active {
+  left:0;
+  opacity:1;
+}
+
+.ng-leave {
+  left:0;
+  opacity:1;
+}
+.ng-leave.ng-leave-active {
+  left:-10px;
+  opacity:0;
+}
+
+.ng-move {
+  opacity:0.5;
+}
+.ng-move.ng-move-active {
+  opacity:1;
+}
+
+.ng-enter,
+.ng-leave,
+.ng-move {
+  position:relative;
+}
+
+.ng-enter {
+  -webkit-animation: 0.5s repeat-animation-enter;
+  animation: 0.5s repeat-animation-enter;
+}
+
+.ng-leave {
+  -webkit-animation: 0.5s repeat-animation-leave;
+  animation: 0.5s repeat-animation-leave;
+}
+
+.ng-move {
+  -webkit-animation: 0.5s repeat-animation-move;
+  animation: 0.5s repeat-animation-move;
+}
+
+@keyframes repeat-animation-enter {
+  from {
+    left:-10px;
+    opacity:0;
+  }
+  to {
+    left:0;
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes repeat-animation-enter {
+  from {
+    left:-10px;
+    opacity:0;
+  }
+  to {
+    left:0;
+    opacity:1;
+  }
+}
+
+@keyframes repeat-animation-leave {
+  from {
+    left:0;
+    opacity:1;
+  }
+  to {
+    left:-10px;
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes repeat-animation-leave {
+  from {
+    left:0;
+    opacity:1;
+  }
+  to {
+    left:-10px;
+    opacity:0;
+  }
+}
+
+@keyframes repeat-animation-move {
+  from { opacity:0.5; }
+  to { opacity:1; }
+}
+
+@-webkit-keyframes repeat-animation-move {
+  from { opacity:0.5; }
+  to { opacity:1; }
+}
+
+.card-actions
+{
+  margin-bottom: 15px;
 }

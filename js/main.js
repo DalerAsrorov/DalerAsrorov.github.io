@@ -1,5 +1,5 @@
 angular
-  .module('app', ['ui.router', 'ngMaterial', 'ngMdIcons'])
+  .module('app', ['ui.router', 'ngMaterial', 'ngMdIcons', 'ngAnimate'])
 
   // routing
   .config(function($stateProvider, $urlRouterProvider) {

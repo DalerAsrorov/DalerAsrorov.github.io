@@ -86,7 +86,8 @@ angular
         "github": "https://github.com/DalerAsrorov/infomania",
         "link": "http://infomania-daler.herokuapp.com/"
       },
+    ];
 
-    ]
 
-  });
+    
+});

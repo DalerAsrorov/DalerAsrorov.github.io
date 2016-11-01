@@ -1,7 +1,7 @@
 <md-content flex layout-xs="column" layout="column" class="md-padding main-md-content">
   <div class="content-projects row">
-    <div class="grid-holder">
-      <md-card class="project-card col-lg-3" ng-repeat="item in vm.projectsList">
+    <div class="grid-holder effect-4">
+      <md-card ng-repeat="item in vm.projectsList" class="repeat-animation project-card col-lg-3 col-md-4 col-sm-4 col-xs-10" id="projectCard">
         <img ng-src="{{item.imgUrl}}" class="md-card-image project-image" alt="{{img.name}}">
         <md-card-title>
           <md-card-title-text>
@@ -10,10 +10,10 @@
         </md-card-title>
         <md-card-content>
           <p>
-            {{item.description | limitTo:100}} ...
+            {{item.description | limitTo:80}} ...
           </p>
         </md-card-content>
-        <md-card-actions layout="row" layout-align="end center">
+        <md-card-actions class="card-actions" layout="row" layout-align="end center">
           <a href="{{item.github}}" target="_blank">
             <md-button class="md-icon-button project-icon-button" aria-label="{{item.github}}">
               <ng-md-icon class="project-icon" icon="github-circle" size="30"></ng-md-icon>
