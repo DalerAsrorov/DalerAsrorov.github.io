@@ -18,7 +18,7 @@ angular
         status: statuses.complete,
         imgUrl: imgBaseUrl + "uniket.png",
         description: "iOS mobile application that allows, students to sell, buy, and make transaction within specific radius and type.",
-        role: "Lead developer",
+        role: "Software developer",
         stack: "Objective-C, Cocoa Touch, Firebase",
         "github": "",
         "link": "https://itunes.apple.com/us/app/uniket/id980147169?mt=8"
