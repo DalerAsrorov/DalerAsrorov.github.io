@@ -193,11 +193,15 @@
   @include horizontal-align();
 }
 
+.card-title
+{
+  padding-bottom: 12px;
+}
+
 .card-description
 {
   p {
     color: $lightgrey;
     font-style: italic;
   }
-
 }

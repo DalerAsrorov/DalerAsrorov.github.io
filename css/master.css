@@ -212,6 +212,9 @@ li.nav-button:not(.first-nav) {
   display: block;
   margin: 0 auto; }
 
+.card-title {
+  padding-bottom: 12px; }
+
 .card-description p {
   color: #928e8e;
   font-style: italic; }
