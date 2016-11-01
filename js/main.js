@@ -18,5 +18,17 @@ angular
         controller: 'ProjectsCtrl',
         controllerAs: 'vm'
       })
+      .state('news', {
+        url: '/news',
+        templateUrl: '/templates/news.html',
+        controller: 'NewsCtrl',
+        controllerAs: 'vm'
+      })
+      .state('social', {
+        url: '/social',
+        templateUrl: '/templates/social.html',
+        controller: 'SocialCtrl',
+        controllerAs: 'vm'
+      })
 
   });
