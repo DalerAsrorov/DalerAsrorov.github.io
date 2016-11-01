@@ -5,10 +5,17 @@ angular
     console.log("projects page is here.");
     var imgBaseUrl = "/assets/img/";
 
+    var statuses = {
+      complete: "Is complete.",
+      progress: "Currently in progress...",
+      debug: "Currently debugging..."
+    };
+
     vm.projectsList = [
       {
         name: "Uniket",
         type: "Mobile",
+        status: statuses.complete,
         imgUrl: imgBaseUrl + "uniket.png",
         description: "iOS mobile application that allows, students to sell, buy, and make transaction within specific radius and type.",
         role: "Lead developer",
@@ -19,6 +26,7 @@ angular
       {
         name: "LiveToShare",
         type: "Web",
+        status: statuses.complete,
         imgUrl: imgBaseUrl + "livetoshare.png",
         description: "Final project for the Database Web Development class. Application that allows sharing of stories through media.",
         role: "Lead developer",
@@ -29,6 +37,7 @@ angular
       {
         name: "Y.Xplore",
         type: "Mobile",
+        status: statuses.progress,
         imgUrl: imgBaseUrl + "yxplore.png",
         description: "Y.Xplore is a spatial social network. This means that you will discover posts only when you are in a certain location. In this way it is different than other social media platforms because it encourages you to engage with your surroundings.",
         role: "Lead developer",
@@ -39,6 +48,7 @@ angular
       {
         name: "Capnote",
         type: "Mobile",
+        status: status.progress,
         imgUrl: imgBaseUrl + "capnote.jpg",
         description: "Mobile app for iOS devices to capture, manage, and share notes in various formats. It helps people find note-takers for the same class and collaborate via messaging/video. Made in Swift and Cocoa Touch. ",
         role: "Lead developer",
@@ -49,6 +59,7 @@ angular
       {
         name: "MelodyClash",
         type: "Web",
+        status: status.progress,
         imgUrl: imgBaseUrl + "melodyclash.png",
         description: "Web app that allows users to see the closest events, bands, stories, and statistics of their favorite genres.",
         role: "Lead developer",
@@ -59,6 +70,7 @@ angular
       {
         name: "SmartCollab",
         type: "Web",
+        status: status.complete,
         imgUrl: imgBaseUrl + "smartcollab.png",
         description: "Application that provides collaboration services wrapped around ArcGIS and intagrated with AI bot that provides various map services.",
         role: "Lead developer",
@@ -69,6 +81,7 @@ angular
       {
         name: "Fanmap",
         type: "Web",
+        status: status.complete,
         imgUrl: imgBaseUrl + "fanmap.jpg",
         description: "Web application that allows users to analyze taste of music around the world through maps, sentimental analysis, and cool visualizations.",
         role: "Lead developer",
@@ -79,6 +92,7 @@ angular
       {
         name: "Infomania",
         type: "Web",
+        status: status.debug,
         imgUrl: imgBaseUrl + "infomania.png",
         description: "Question-answer web platform that searches quickly for relevant information and bookmark it for later reading.",
         role: "Lead developer",

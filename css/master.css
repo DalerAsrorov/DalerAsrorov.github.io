@@ -235,6 +235,12 @@ li.nav-button:not(.first-nav) {
 .modal-text {
   margin-top: 15px; }
 
+.project-dialog {
+  width: 45%; }
+
+.custom-modal-toolbar, .md-toolbar-tools {
+  background: #5c88bf; }
+
 #profileImg {
   width: 60%;
   height: 60%;

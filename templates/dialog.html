@@ -1,6 +1,6 @@
-<md-dialog aria-label="Project label">
+<md-dialog class="project-dialog" aria-label="{{vm.project.name}}">
   <form ng-cloak>
-    <md-toolbar>
+    <md-toolbar class="custom-modal-toolbar">
       <div class="md-toolbar-tools">
         <h2>{{vm.project.name}}</h2>
         <span flex></span>
@@ -17,23 +17,40 @@
         </div>
         <div class="modal-text">
           <p>
+            <span class="lead">Type: </span> {{vm.project.type}}
+          </p>
+          <p>
             <span class="lead">Stack: </span> {{vm.project.stack}}
           </p>
-
           <p>
-            The highest concentration of Mangifera genus is in the western part of Malesia (Sumatra, Java and Borneo) and in Burma and India. While other Mangifera species (e.g. horse mango, M. foetida) are also grown on a more localized basis, Mangifera indica&mdash;the "common mango" or "Indian mango"&mdash;is the only mango tree commonly cultivated in many tropical and subtropical regions.
+            <span class="lead">Current Status: </span> {{vm.project.status}}
           </p>
           <p>
-            It originated in Indian subcontinent (present day India and Pakistan) and Burma. It is the national fruit of India, Pakistan, and the Philippines, and the national tree of Bangladesh. In several cultures, its fruit and leaves are ritually used as floral decorations at weddings, public celebrations, and religious ceremonies.
+            <span class="lead">Role: </span> {{vm.project.role}}
+          </p>
+          <p>
+            <span class="lead">Description: </span> {{vm.project.description}}
           </p>
         </div>
       </div>
     </md-dialog-content>
 
     <md-dialog-actions layout="row">
-      <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
-        More on Wikipedia
-      </md-button>
+      <!-- <md-button href="http://en.wikipedia.org/wiki/Mango" target="_blank" md-autofocus>
+
+      </md-button> -->
+      <div class="actions-wrapper">
+        <a href="{{vm.project.github}}" target="_blank">
+          <md-button class="md-icon-button project-icon-button" aria-label="{{vm.project.github}}">
+            <ng-md-icon class="project-icon" icon="github-circle" size="30"></ng-md-icon>
+          </md-button>
+        </a>
+        <a ng-href="{{vm.project.link}}" target="_blank">
+          <md-button  class="md-icon-button project-icon-button" aria-label="{{vm.project.link}}">
+            <ng-md-icon class="project-icon" icon="visibility" size="30"></ng-md-icon>
+          </md-button>
+        </a>
+      </div>
       <span flex></span>
       <md-button ng-click="vm.answer('useful')">
         Done

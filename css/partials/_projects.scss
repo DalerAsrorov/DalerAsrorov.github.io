@@ -225,3 +225,18 @@
 {
   margin-top: 15px;
 }
+
+.project-dialog
+{
+    width: 45%;
+}
+
+.custom-modal-toolbar
+{
+  background: $mastercolor;
+}
+
+.md-toolbar-tools
+{
+  @extend .custom-modal-toolbar;
+}
