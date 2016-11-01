@@ -1,6 +1,6 @@
 angular
   .module('app')
-  .controller('ProjectsCtrl', function() {
+  .controller('ProjectsCtrl', function($mdDialog) {
     var vm = this;
     console.log("projects page is here.");
     var imgBaseUrl = "/assets/img/";
@@ -30,7 +30,7 @@ angular
         name: "Y.Xplore",
         type: "Mobile",
         imgUrl: imgBaseUrl + "yxplore.png",
-        description: "Final project for the Database Web Development class. Application that allows sharing of stories through media.",
+        description: "Y.Xplore is a spatial social network. This means that you will discover posts only when you are in a certain location. In this way it is different than other social media platforms because it encourages you to engage with your surroundings.",
         role: "Lead developer",
         stack: "Java, Swift, Apache Cordova,JQuery, ArcGIS SDKs & APIs, HTML/CSS, Firebase",
         "github": "https://github.com/debalin/y-xplore",
@@ -59,8 +59,8 @@ angular
       {
         name: "SmartCollab",
         type: "Web",
-        imgUrl: imgBaseUrl + "smartcollab.jpeg",
-        description: "Application that provides collaboration services wrapped around ArcGIS intagrated with AI bot that provides various map services.",
+        imgUrl: imgBaseUrl + "smartcollab.png",
+        description: "Application that provides collaboration services wrapped around ArcGIS and intagrated with AI bot that provides various map services.",
         role: "Lead developer",
         stack: "AngularJS, NodeJS, JQuery, HTML/CSS, Firebase",
         "github": "https://github.com/DalerAsrorov/LiveToShare",
@@ -69,7 +69,7 @@ angular
       {
         name: "Fanmap",
         type: "Web",
-        imgUrl: imgBaseUrl + "fanmap.jpeg",
+        imgUrl: imgBaseUrl + "fanmap.jpg",
         description: "Web application that allows users to analyze taste of music around the world through maps, sentimental analysis, and cool visualizations.",
         role: "Lead developer",
         stack: "EmberJS, NodeJS, JQuery, HTML/CSS, Firebase",
@@ -79,7 +79,7 @@ angular
       {
         name: "Infomania",
         type: "Web",
-        imgUrl: imgBaseUrl + "infomania.jpeg",
+        imgUrl: imgBaseUrl + "infomania.png",
         description: "Question-answer web platform that searches quickly for relevant information and bookmark it for later reading.",
         role: "Lead developer",
         stack: "PHP, Laravel, JQuery, HTML/CSS, Firebase",
@@ -88,6 +88,42 @@ angular
       },
     ];
 
+    function DialogController($mdDialog) {
+      var vm = this;
+      vm.name ="name";
+      vm.hide = function() {
+        $mdDialog.hide();
+      };
+
+      vm.cancel = function() {
+        $mdDialog.cancel();
+      };
+
+      vm.answer = function(answer) {
+        $mdDialog.hide(answer);
+      };
+
+
+    }
+
+    vm.showAdvanced = function(ev) {
+       $mdDialog.show({
+         controller: DialogController,
+         controllerAs: "vm",
+         templateUrl: '/templates/dialog.html',
+         parent: angular.element(document.body),
+         targetEvent: ev,
+         clickOutsideToClose: true,
+         fullscreen: false // Only for -xs, -sm breakpoints.
+       })
+       .then(function(answer) {
+         vm.status = 'You said the information was "' + answer + '".';
+         console.log(vm.status);
+       }, function() {
+         vm.status = 'You cancelled the dialog.';
+         console.log(vm.status);
+       });
+    };
 
 
 });
