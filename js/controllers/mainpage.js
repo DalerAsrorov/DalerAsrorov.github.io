@@ -5,11 +5,7 @@ angular
     vm.tooltipList = [];
     var visited = window.localStorage.getItem("visited");
 
-    window.addEventListener("beforeunload", function (e) {
-      window.localStorage.removeItem("visited");
-      window.localStorage.setItem("lastLink", "Main");
-      console.log("sessionOff");
-    });
+    sessionOff();
 
     var sentenceList =
     [
