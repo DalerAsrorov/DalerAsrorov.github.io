@@ -42,9 +42,9 @@ $cellpadding: 12px;
 
 @mixin box-shadow-hover()
 {
-  -webkit-box-shadow: inset 0px 3px 56px -1px rgba(92,137,191,1);
-  -moz-box-shadow: inset 0px 3px 56px -1px rgba(92,137,191,1);
-  box-shadow: inset 0px 3px 56px -1px rgba(92,137,191,1);
+  -webkit-box-shadow: inset 0px 3px 56px -1px $mastercolorrgba;
+  -moz-box-shadow: inset 0px 3px 56px -1px $mastercolorrgba;
+  box-shadow: inset 0px 3px 56px -1px $mastercolorrgba;
 }
 
 
