@@ -5,7 +5,7 @@ angular
     vm.tooltipList = [];
     var visited = window.localStorage.getItem("visited");
 
-    // sessionOff();
+    sessionOff();
 
     var sentenceList =
     [

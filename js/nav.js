@@ -37,7 +37,7 @@ $("body").on("click", ".nav-item", function() {
 function sessionOff() {
   window.addEventListener("beforeunload", function (e) {
     window.localStorage.removeItem("visited");
-    window.localStorage.setItem("lastLink", "Main");
+    // window.localStorage.setItem("lastLink", "Main");
     console.log("sessionOff");
   });
 }
