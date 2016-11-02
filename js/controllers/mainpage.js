@@ -7,8 +7,9 @@ angular
 
     window.addEventListener("beforeunload", function (e) {
       window.localStorage.removeItem("visited");
+      window.localStorage.setItem("lastLink", "Main");
+      console.log("sessionOff");
     });
-
 
     var sentenceList =
     [

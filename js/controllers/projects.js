@@ -5,6 +5,12 @@ angular
     console.log("projects page is here.");
     var imgBaseUrl = "/assets/img/";
 
+    window.addEventListener("beforeunload", function (e) {
+      window.localStorage.removeItem("visited");
+      window.localStorage.setItem("lastLink", "Main");
+      console.log("sessionOff");
+    });
+
     var statuses = {
       complete: "Is complete.",
       progress: "Currently in progress...",

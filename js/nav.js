@@ -33,3 +33,8 @@ $("body").on("click", ".nav-item", function() {
   $this.find(".nav-button").css(style);
 
 });
+
+function sessionOff()
+{
+
+}
