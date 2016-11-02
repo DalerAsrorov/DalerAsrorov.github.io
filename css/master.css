@@ -114,6 +114,10 @@ li.nav-button:not(.first-nav) {
   padding: 0;
   height: 390px;
   margin-bottom: 10px; }
+  .project-card:hover {
+    -webkit-box-shadow: inset 0px 3px 56px -1px #5c89bf;
+    -moz-box-shadow: inset 0px 3px 56px -1px #5c89bf;
+    box-shadow: inset 0px 3px 56px -1px #5c89bf; }
 
 .project-image {
   height: 230px; }

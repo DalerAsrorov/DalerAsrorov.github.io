@@ -1,6 +1,7 @@
 $base-font: Helvetica, sans-serif;
 $basecolor: #fff;
 $mastercolor: #5c88bf;
+$mastercolorrgba: rgba(92,137,191,1);
 $lighttext: #fff;
 $linkhovercolor: #5c88bf;
 $bordercolor: lightgrey;
@@ -38,6 +39,14 @@ $cellpadding: 12px;
   display: block;
   margin: 0 auto;
 }
+
+@mixin box-shadow-hover()
+{
+  -webkit-box-shadow: inset 0px 3px 56px -1px rgba(92,137,191,1);
+  -moz-box-shadow: inset 0px 3px 56px -1px rgba(92,137,191,1);
+  box-shadow: inset 0px 3px 56px -1px rgba(92,137,191,1);
+}
+
 
 @import 'partials/_reset';
 @import 'partials/_projects';

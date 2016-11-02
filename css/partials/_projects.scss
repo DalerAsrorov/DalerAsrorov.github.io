@@ -58,6 +58,11 @@
   @include zero-margin-padding();
   height: $gridheight;
   margin-bottom: 10px;
+
+  &:hover
+  {
+    @include box-shadow-hover();
+  }
 }
 
 .project-image
