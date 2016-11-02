@@ -4,15 +4,17 @@ $mastercolor: #5c88bf;
 $lighttext: #fff;
 $linkhovercolor: #5c88bf;
 $bordercolor: lightgrey;
-$bold: 600;
+$bold: 800;
 $navfont: 12pt;
 $animatedtextfont: 20pt;
-$animatedtextcolor: #dadada;
+$animatedtextcolor: #b3b3b3;
 $contentpadding: 15px;
 $dark: #29282d;
 $gridheight: 390px;
 $lightgrey: #928e8e;
 $normalfont: 12pt;
+$fontfamily: 'Dosis', sans-serif;
+$cellpadding: 12px;
 
 /* Mixin */
 @mixin vertical-align($position: relative)

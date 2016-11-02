@@ -1,7 +1,12 @@
 /* Mixin */
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+* {
+  font-family: "Dosis", sans-serif; }
+
 html, body, ul, ol {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "Dosis", sans-serif; }
 
 body {
   font: Helvetica, sans-serif;
@@ -204,7 +209,8 @@ li.nav-button:not(.first-nav) {
   margin-bottom: 15px; }
 
 .card-description {
-  padding-bottom: 5px; }
+  display: block;
+  padding: 0px 12px; }
 
 .actions-wrapper {
   float: none;
@@ -219,7 +225,7 @@ li.nav-button:not(.first-nav) {
   font-style: italic; }
 
 .lead {
-  font-weight: 600;
+  font-weight: 800;
   font-size: 12pt; }
 
 .modal-image {
@@ -293,7 +299,7 @@ li.nav-button:not(.first-nav) {
 .content-intro, #nameDiv {
   font-size: 20pt;
   display: inline;
-  color: #dadada; }
+  color: #b3b3b3; }
 
 .content-bottom {
   height: 100px;
