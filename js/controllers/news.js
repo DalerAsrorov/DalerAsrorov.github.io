@@ -3,5 +3,5 @@ angular
   .controller('NewsCtrl', function() {
     var vm = this;
 
-    sessionOff();
+    // sessionOff();
   });
