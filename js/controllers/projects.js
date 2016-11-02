@@ -48,7 +48,7 @@ angular
       {
         name: "Capnote",
         type: "Mobile",
-        status: status.progress,
+        status: statuses.progress,
         imgUrl: imgBaseUrl + "capnote.jpg",
         description: "Mobile app for iOS devices to capture, manage, and share notes in various formats. It helps people find note-takers for the same class and collaborate via messaging/video. Made in Swift and Cocoa Touch. ",
         role: "Lead developer",
@@ -59,7 +59,7 @@ angular
       {
         name: "MelodyClash",
         type: "Web",
-        status: status.progress,
+        status: statuses.progress,
         imgUrl: imgBaseUrl + "melodyclash.png",
         description: "Web app that allows users to see the closest events, bands, stories, and statistics of their favorite genres.",
         role: "Lead developer",
@@ -70,7 +70,7 @@ angular
       {
         name: "SmartCollab",
         type: "Web",
-        status: status.complete,
+        status: statuses.complete,
         imgUrl: imgBaseUrl + "smartcollab.png",
         description: "Application that provides collaboration services wrapped around ArcGIS and intagrated with AI bot that provides various map services.",
         role: "Lead developer",
@@ -81,7 +81,7 @@ angular
       {
         name: "Fanmap",
         type: "Web",
-        status: status.complete,
+        status: statuses.complete,
         imgUrl: imgBaseUrl + "fanmap.jpg",
         description: "Web application that allows users to analyze taste of music around the world through maps, sentimental analysis, and cool visualizations.",
         role: "Lead developer",
@@ -92,7 +92,7 @@ angular
       {
         name: "Infomania",
         type: "Web",
-        status: status.debug,
+        status: statuses.debug,
         imgUrl: imgBaseUrl + "infomania.png",
         description: "Question-answer web platform that searches quickly for relevant information and bookmark it for later reading.",
         role: "Lead developer",
