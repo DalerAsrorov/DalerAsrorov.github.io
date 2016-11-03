@@ -7,14 +7,13 @@ angular
 
     sessionOff();
 
-    var sentenceList =
-    [
+    var sentenceList = [
       "Hello. ^400 I am Daler.",
       "I'm a full-stack engineer...",
       "...^1000a technology enthusiast.",
       "...^1000a big fan of space.",
       "I truly believe you're in ^500 the right place.",
-      "I built this website from scratch! :) ^1000",
+      "I built this website from scratch! <span class='em em-blush custom-emoji'> </span> ^1000",
       "Enjoy!"
     ];
 
@@ -29,6 +28,7 @@ angular
           showCursor: true,
           // character for cursor
           cursorChar: "|",
+          contentType: "html",
           loopCount: false,
           callback: function() {
             setTimeout(displayString, 3000);

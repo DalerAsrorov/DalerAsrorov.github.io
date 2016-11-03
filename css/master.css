@@ -338,4 +338,8 @@ li.nav-button:not(.first-nav) {
   .md-button.md-fab.custom-button:focus > .custom-icon {
     fill: #fff; }
 
+.custom-emoji {
+  height: 1.0em;
+  width: 1.0em; }
+
 /*# sourceMappingURL=master.css.map */
