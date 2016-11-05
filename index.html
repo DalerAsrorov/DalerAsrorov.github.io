@@ -14,28 +14,28 @@
     <md-sidenav  layout="column" class="sidenav1" md-is-locked-open='true'>
       <div id="navListHolder">
         <ul class="list-group">
-          <li class="list-group-item nav-item first-nav">
+          <li ui-sref-active="active" class="list-group-item nav-item first-nav">
             <a ui-sref="main" class="nav-link">
-              <md-button class="nav-button" style="border-top: none;">
+              <md-button ui-sref-active="{class: 'active-nav', state: 'main'}" class="nav-button" style="border-top: none;">
                 <span class="nav-span">Main</span>
               </md-button>
             </a>
           </li>
-          <li class="list-group-item nav-item">
+          <li ui-sref-active="active" class="list-group-item nav-item">
             <a ui-sref="projects" class="nav-link">
-              <md-button class="nav-button">
+              <md-button ui-sref-active="{class: 'active-nav', state: 'projects'}" class="nav-button">
                 <span class="nav-span">Projects</span>
               </md-button>
             </a>
           </li>
-          <li class="list-group-item nav-item">
+          <li ui-sref-active="active" class="list-group-item nav-item">
             <a ui-sref="news" class="nav-link">
               <md-button class="nav-button">
                 <span class="nav-span">News</span>
               </md-button>
             </a>
           </li>
-          <li class="list-group-item nav-item">
+          <li ui-sref-active="active" class="list-group-item nav-item">
             <a ui-sref="social" class="nav-link">
               <md-button class="nav-button">
                 <span class="nav-span">Social</span>

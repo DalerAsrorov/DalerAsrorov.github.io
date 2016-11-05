@@ -5,7 +5,7 @@ angular
     console.log("projects page is here.");
     var imgBaseUrl = "/assets/img/";
 
-    sessionOff();
+    // sessionOff();
 
     var statuses = {
       complete: "Is complete.",
@@ -119,8 +119,6 @@ angular
       vm.answer = function(answer) {
         $mdDialog.hide(answer);
       };
-
-
     }
 
     function getProjectObj(name) {

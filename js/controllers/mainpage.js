@@ -5,7 +5,7 @@ angular
     vm.tooltipList = [];
     var visited = window.localStorage.getItem("visited");
 
-    sessionOff();
+    // sessionOff();
 
     var sentenceList = [
       "Hello. ^400 I am Daler.",
@@ -17,28 +17,28 @@ angular
       "Enjoy!"
     ];
 
-    if(!visited) {
-      console.log("not yet visited");
-      $(function() {
-        window.localStorage.setItem("visited", true);
-        $("#animatedText").typed({
-          strings: sentenceList,
-          typedSpeed: 0,
-          // show cursor
-          showCursor: true,
-          // character for cursor
-          cursorChar: "|",
-          contentType: "html",
-          loopCount: false,
-          callback: function() {
-            setTimeout(displayString, 3000);
-          }
-        });
-      });
-    } else if (visited) {
-      console.log("already visited");
-      displayString();
-    }
+    // if(!visited) {
+    //   console.log("not yet visited");
+    //   $(function() {
+    //     window.localStorage.setItem("visited", true);
+    //     $("#animatedText").typed({
+    //       strings: sentenceList,
+    //       typedSpeed: 0,
+    //       // show cursor
+    //       showCursor: true,
+    //       // character for cursor
+    //       cursorChar: "|",
+    //       contentType: "html",
+    //       loopCount: false,
+    //       callback: function() {
+    //         setTimeout(displayString, 3000);
+    //       }
+    //     });
+    //   });
+    // } else if (visited) {
+    //   console.log("already visited");
+    //   displayString();
+    // }
 
     function displayString() {
       $(".typed-cursor").remove();

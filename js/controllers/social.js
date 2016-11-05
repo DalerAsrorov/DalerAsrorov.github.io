@@ -3,6 +3,6 @@ angular
   .controller('SocialCtrl', function() {
     var vm = this;
 
-    sessionOff();
+    // sessionOff();
 
   });
