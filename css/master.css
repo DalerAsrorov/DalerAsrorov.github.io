@@ -140,9 +140,13 @@ li.nav-button:not(.first-nav) {
     -webkit-box-shadow: 0px 3px 56px -1px #c6d5e2;
     -moz-box-shadow: 0px 3px 56px -1px #c6d5e2;
     box-shadow: 0px 3px 56px -1px #c6d5e2; }
+  .project-card:hover > img {
+    animation: cardhover 1.2s infinite;
+    opacity: 1; }
 
 .project-image {
-  height: 230px; }
+  height: 230px;
+  opacity: 0.65; }
 
 .card-fade {
   opacity: 1; }

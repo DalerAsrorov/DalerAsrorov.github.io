@@ -63,14 +63,35 @@
   {
     @include box-shadow-hover();
   }
+  &:hover > img
+  {
+
+    animation: cardhover 1.2s infinite;
+    opacity: 1;
+  }
 }
+
+// @keyframes cardhover
+// {
+//   0% {
+//     opacity: $opacity;
+//   }
+//
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+
 
 .project-image
 {
   height: 230px;
+  opacity: $opacity;
 }
 
-.card-fade {
+.card-fade
+{
     opacity: 1;
 }
 
