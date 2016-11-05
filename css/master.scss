@@ -43,9 +43,9 @@ $iconhoverbcolor: #c6d5e2;
 
 @mixin box-shadow-hover()
 {
-  -webkit-box-shadow: inset 0px 3px 56px -1px $iconhoverbcolor;
-  -moz-box-shadow: inset 0px 3px 56px -1px $iconhoverbcolor;
-  box-shadow: inset 0px 3px 56px -1px $iconhoverbcolor;
+  -webkit-box-shadow:  0px 3px 56px -1px $iconhoverbcolor;
+  -moz-box-shadow:  0px 3px 56px -1px $iconhoverbcolor;
+  box-shadow:  0px 3px 56px -1px $iconhoverbcolor;
 }
 
 
