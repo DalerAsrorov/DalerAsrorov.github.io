@@ -16,6 +16,7 @@ $lightgrey: #928e8e;
 $normalfont: 12pt;
 $fontfamily: 'Dosis', sans-serif;
 $cellpadding: 12px;
+$iconhoverbcolor: #c6d5e2;
 
 /* Mixin */
 @mixin vertical-align($position: relative)
@@ -42,9 +43,9 @@ $cellpadding: 12px;
 
 @mixin box-shadow-hover()
 {
-  -webkit-box-shadow: inset 0px 3px 56px -1px $mastercolorrgba;
-  -moz-box-shadow: inset 0px 3px 56px -1px $mastercolorrgba;
-  box-shadow: inset 0px 3px 56px -1px $mastercolorrgba;
+  -webkit-box-shadow: inset 0px 3px 56px -1px $iconhoverbcolor;
+  -moz-box-shadow: inset 0px 3px 56px -1px $iconhoverbcolor;
+  box-shadow: inset 0px 3px 56px -1px $iconhoverbcolor;
 }
 
 

@@ -112,11 +112,11 @@ li.nav-button:not(.first-nav) {
   fill: #fff; }
 
 .project-icon-button {
-  background: #29282d; }
+  background: #c6d5e2; }
   .project-icon-button:hover {
     background: #fff; }
   .project-icon-button:hover > .project-icon {
-    fill: #29282d; }
+    fill: #c6d5e2; }
   .project-icon-button:focus {
     background: #29282d;
     color: #fff; }
@@ -137,9 +137,9 @@ li.nav-button:not(.first-nav) {
   height: 390px;
   margin-bottom: 10px; }
   .project-card:hover {
-    -webkit-box-shadow: inset 0px 3px 56px -1px #5c89bf;
-    -moz-box-shadow: inset 0px 3px 56px -1px #5c89bf;
-    box-shadow: inset 0px 3px 56px -1px #5c89bf; }
+    -webkit-box-shadow: inset 0px 3px 56px -1px #c6d5e2;
+    -moz-box-shadow: inset 0px 3px 56px -1px #c6d5e2;
+    box-shadow: inset 0px 3px 56px -1px #c6d5e2; }
 
 .project-image {
   height: 230px; }

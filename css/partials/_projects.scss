@@ -18,7 +18,7 @@
 
 .project-icon-button
 {
-  background: $dark;
+  background: $iconhoverbcolor;
 
   &:hover
   {
@@ -26,7 +26,7 @@
   }
   &:hover > .project-icon
   {
-    fill: $dark;
+    fill: $iconhoverbcolor;
   }
   &:focus
   {
