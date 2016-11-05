@@ -34,10 +34,10 @@
 //
 // });
 //
-// function sessionOff() {
-//   window.addEventListener("beforeunload", function (e) {
-//     window.localStorage.removeItem("visited");
-//     // window.localStorage.setItem("lastLink", "Main");
-//     console.log("sessionOff");
-//   });
-// }
+function sessionOff() {
+  window.addEventListener("beforeunload", function (e) {
+    window.localStorage.removeItem("visited");
+    // window.localStorage.setItem("lastLink", "Main");
+    console.log("sessionOff");
+  });
+}

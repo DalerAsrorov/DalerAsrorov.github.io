@@ -5,7 +5,7 @@ angular
     console.log("projects page is here.");
     var imgBaseUrl = "/assets/img/";
 
-    // sessionOff();
+    sessionOff();
 
     var statuses = {
       complete: "Is complete.",
