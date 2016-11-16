@@ -276,6 +276,10 @@ li.nav-button:not(.first-nav) {
 .custom-modal-toolbar, .md-toolbar-tools {
   background: #5c88bf; }
 
+.inactive {
+  cursor: none;
+  pointer-events: none; }
+
 #profileImg {
   width: 60%;
   height: 60%;

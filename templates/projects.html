@@ -15,13 +15,13 @@
         </md-card-content>
         <md-card-actions class="card-actions" layout="row" layout-align="end center">
           <div class="actions-wrapper">
-            <a href="{{item.github}}" target="_blank">
+            <a ng-class="{'inactive': item.github == ''}" href="{{item.github}}" target="_blank">
               <md-button class="md-icon-button project-icon-button" aria-label="{{item.github}}">
                 <ng-md-icon class="project-icon" icon="github-circle" size="30"></ng-md-icon>
               </md-button>
             </a>
-            <a ng-href="{{item.link}}" target="_blank">
-              <md-button  class="md-icon-button project-icon-button" aria-label="{{item.link}}">
+            <a ng-class="{'inactive': item.link == ''}" ng-href="{{item.link}}" target="_blank">
+              <md-button class="md-icon-button project-icon-button" aria-label="{{item.link}}">
                 <ng-md-icon class="project-icon" icon="visibility" size="30"></ng-md-icon>
               </md-button>
             </a>
