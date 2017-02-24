@@ -59,9 +59,9 @@ angular
         "url": "https://github.com/DalerAsrorov"
       },
       {
-        "name": "Twitter",
-        "icon": "twitter",
-        "url": "https://twitter.com/_dafiasco_"
+        "name": "SoundCloud",
+        "icon": "cloud",
+        "url": "https://soundcloud.com/daler-asrorov"
       },
       {
         "name": "Email",
