@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Grid game</title>
+
+  <style type="text/css" media="screen">
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    section {
+      padding: 5px;
+    }
+
+    #wrapper {
+      width: 100%;
+      height: 100%;
+    }
+
+    #grid {
+      display: block;
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 15px;
+      background: lightblue;
+      /*height: 600px;*/
+      overflow: auto;
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      border: 1px solid #d0d0ff;
+    }
+
+    .on {
+      background: green;
+    }
+
+    .pc100 {
+      width: 100%;
+    }
+
+    .off {
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="settings">
+      <section id="intro">
+        <h1>Fill the grid game.</h1>
+      </section>
+      <section id="params">
+        <input id="numRows" placeholder="Number of columns" value="" />
+        <input id="numCols" placeholder="Number of rows" value="" />
+        <button type="button" id="createGridBtn"> Create grid </button>
+      </section>
+      <section id="message">
+        <div id="output"></div>
+      </section>
+    </div>
+    <div id="grid">
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    window.onload = function(ev) {
+      var Grid = function(rows, cols) {
+        this.rows = rows;
+        this.cols = cols;
+
+        this.struct = {};
+      }
+
+      Grid.prototype.populateStruct = function() {
+        var countIndex = 0;
+
+        for(var i = 0; i < this.rows; i++) {
+          for(var j = 0; j < this.cols; j++) {
+            this.struct[countIndex] = {row: i, column: j, status: 'off'};
+            countIndex++;
+          }
+        }
+      }
+
+      Grid.prototype.addEventListenerToAllCells = function(event, fn) {
+        var myStruct = this.struct;
+        for(var key in this.struct) {
+          if(myStruct.hasOwnProperty(key)) {
+            var cell = this.struct[key];
+            var cellHtml = cell.html;
+
+            cellHtml.addEventListener(event, fn);
+          }
+        }
+      }
+
+      Grid.prototype.identifyChildren = function() {
+        var self = this;
+
+        var countIndex = 0;
+        for(var i = 0; i < this.rows; i++) {
+          for(var j = 0; j < this.cols; j++){
+            var currentCell = this.struct[countIndex];
+            var currentCellHtml = currentCell.html;
+            var currentCellChildren = getChildren(currentCell);
+            this.struct[countIndex].children = currentCellChildren;
+            countIndex++;
+          }
+        }
+
+        // will return an array of children
+        function getChildren(cell) {
+          var children = [];
+          var nRow = 0, nCol = 0;
+          const cellColumn = cell.column;
+          const cellRow = cell.row;
+
+          nRow = cellRow - 1;
+          nCol = cellColumn;
+          var childTop = {row: nRow, column: nCol};
+
+          nRow = cellRow;
+          nCol = cellColumn + 1;
+          var childRight = {row: nRow, column: nCol};
+
+          nRow = cellRow + 1;
+          nCol = cellColumn;
+          var childBottom = {row: nRow, column: nCol};
+
+          nRow = cellRow;
+          nCol = cellColumn - 1;
+          var childLeft = {row: nRow, column: nCol};
+
+          var tryouts = [childTop, childRight, childBottom, childLeft];
+          tryouts.map((potentialChild) => {
+            if(self.isWithinRange(potentialChild.row, potentialChild.column)) {
+              var pRow = potentialChild.row;
+              var pColumn = potentialChild.column;
+
+              var aChild = self.getStructElement(pRow, pColumn);
+              // var childClone =  Object.assign({}, aChild);
+              children.push(aChild.html);
+            }
+          });
+
+          console.log('cell:', cell, 'children:', children);
+          return children;
+        }
+
+      }
+
+      Grid.prototype.isWithinRange = function(givenRow, givenColumn) {
+        return (givenRow < this.rows && givenRow >= 0) &&
+               (givenColumn < this.cols && givenColumn >= 0);
+      }
+
+      Grid.prototype.getStructElement = function(row, column) {
+        var myStruct = this.struct;
+        for(var key in myStruct) {
+          if(myStruct.hasOwnProperty(key)) {
+            if(myStruct[key].row === row && myStruct[key].column === column) {
+              return myStruct[key];
+            }
+          }
+        }
+      }
+
+      Grid.prototype.getChildrenFromCellHtml = function(cellHtml) {
+        var myStruct = this.struct;
+        for(var key in myStruct) {
+          if(myStruct.hasOwnProperty(key)) {
+            if(myStruct[key].html === cellHtml) {
+              return myStruct[key].children;
+            }
+          }
+        }
+      }
+
+      Grid.prototype.drawHtml = function(containerId) {
+        var td, tr,
+            container = document.getElementById(containerId);
+            nCells = this.rows * this.cols;
+
+        var table = document.createElement('table');
+        var tableRow = document.createElement('tr');
+        var tableValue = document.createElement('td');
+
+        table.className = 'pc100';
+
+        for(var i = 0; i <= nCells; i++) {
+          if((i % this.cols) === 0) {
+            if(tr !== undefined) {
+              table.appendChild(tr);
+            }
+            tr = document.createElement('tr');
+          }
+
+          if(i == nCells)
+            break;
+
+          td = document.createElement('td');
+          td.className = 'cell';
+          tr.append(td);
+
+          this.struct[i].html = td;
+        }
+
+        console.log(this.struct);
+        container.innerHTML = "";
+        container.append(table);
+      }
+
+      var createGridBtn = document.getElementById('createGridBtn');
+
+      createGridBtn.onclick = function(ev) {
+        var nRows = document.getElementById('numRows').value;
+        var nCols = document.getElementById('numCols').value;
+
+        var output = document.querySelector('#output');
+        output.innerHTML = '<h4>Generated grid with ' + nRows + ' rows and ' + nCols + ' columns.';
+
+          var grid = new Grid(parseInt(nRows), parseInt(nCols));
+          grid.populateStruct();
+          grid.drawHtml('grid');
+          grid.identifyChildren();
+          grid.addEventListenerToAllCells('click', function(ev) {
+            var cell = ev.target;
+            toggleCell(cell);
+            var cellChildren = grid.getChildrenFromCellHtml(cell);
+            for(var i = 0; i < cellChildren.length; i++) {
+              var cur = cellChildren[i];
+              toggleCell(cur);
+            }
+          });
+
+          function toggleCell(targetCell) {
+            if(targetCell.className.toLowerCase().indexOf('on') > -1) {
+              targetCell.className = targetCell.className.substr(0, targetCell.className.indexOf('on'));
+            } else {
+              targetCell.className += ' on';
+            }
+          }
+
+          console.log('final struct', grid.struct);
+      }
+    }
+
+  </script>
+</body>
+</html>
