@@ -1,5 +1,5 @@
 import { css } from '@emotion/core'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, Link, StaticQuery } from 'gatsby'
 import React from 'react'
 import { rhythm } from '../utils/typography'
 
@@ -17,6 +17,9 @@ export default function PostsListPreview() {
                   title
                   date(formatString: "DD MMMM, YYYY")
                 }
+                fields {
+                  slug
+                }
                 excerpt
               }
             }
@@ -28,21 +31,29 @@ export default function PostsListPreview() {
           <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div key={node.id}>
-              <h3
+              <Link
+                to={node.fields.slug}
                 css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
+                  text-decoration: none;
+                  color: inherit;
                 `}
               >
-                {node.frontmatter.title}{' '}
-                <span
+                <h3
                   css={css`
-                    color: #bbb;
+                    margin-bottom: ${rhythm(1 / 4)};
                   `}
                 >
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p>
+                  {node.frontmatter.title}{' '}
+                  <span
+                    css={css`
+                      color: #bbb;
+                    `}
+                  >
+                    — {node.frontmatter.date}
+                  </span>
+                </h3>
+                <p>{node.excerpt}</p>
+              </Link>
             </div>
           ))}
         </>
