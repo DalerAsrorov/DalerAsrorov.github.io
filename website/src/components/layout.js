@@ -23,7 +23,6 @@ export default function Layout({ children }) {
         <ul style={{ listStyle: `none`, float: `right` }}>
           <ListLink to="/">Home</ListLink>
           <ListLink to="/about/">About</ListLink>
-          <ListLink to="/contact/">Contact</ListLink>
         </ul>
       </header>
       {children}
