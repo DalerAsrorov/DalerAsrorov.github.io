@@ -3,13 +3,13 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../components/layout'
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data }: any) => {
   const post = data.markdownRemark
 
   return (
     <Layout>
       <h1>{post.frontmatter.title}</h1>
-      <p css={css('color: grey;')}>{post.frontmatter.date}</p>
+      <p css={css('color: hotpink')}>{post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
