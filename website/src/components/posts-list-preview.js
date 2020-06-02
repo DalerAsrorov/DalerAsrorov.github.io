@@ -28,7 +28,7 @@ export default function PostsListPreview() {
       `}
       render={data => (
         <>
-          <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+          <h5>{data.allMarkdownRemark.totalCount} Posts Total</h5>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <div key={node.id}>
               <Link

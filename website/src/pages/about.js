@@ -8,11 +8,7 @@ export default function About({ data }) {
 
   return (
     <Layout>
-      <div style={{ color: `teal` }}>
-        <h4>{data.site.siteMetadata.title}</h4>
-        <Header headerText="Hello Gatsby" />
-        <p>Such wow. Very React.</p>
-      </div>
+      <p>Some information about me</p>
     </Layout>
   )
 }
