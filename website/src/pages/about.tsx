@@ -21,8 +21,9 @@ const Card = styled.article`
 
 const Image = styled.img`
   max-width: ${rhythm(8)};
+  margin-bottom: ${rhythm(1 / 4)};
   border-radius: 50%;
-  margin: 0;
+  border: 2px solid hotpink;
 `
 
 interface IconWrapper {
