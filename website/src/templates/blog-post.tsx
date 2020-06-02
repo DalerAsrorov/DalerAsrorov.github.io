@@ -2,7 +2,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import Layout from '../components/layout'
 
-export default function BlogPost({ data }) {
+const BlogPost = ({ data }) => {
   const post = data.markdownRemark
 
   return (
@@ -23,3 +23,5 @@ export const query = graphql`
     }
   }
 `
+
+export default BlogPost

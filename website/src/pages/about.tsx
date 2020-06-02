@@ -3,7 +3,7 @@ import React from 'react'
 import Header from '../components/header'
 import Layout from '../components/layout'
 
-export default function About({ data }) {
+const About = ({ data }) => {
   console.log({ data })
 
   return (
@@ -22,3 +22,5 @@ export const query = graphql`
     }
   }
 `
+
+export default About
