@@ -18,6 +18,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true, // defaults to false
+        allExtensions: true, // defaults to false
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
