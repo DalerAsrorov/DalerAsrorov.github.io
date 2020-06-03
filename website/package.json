@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
     "clean": "gatsby clean"
   },
   "dependencies": {
