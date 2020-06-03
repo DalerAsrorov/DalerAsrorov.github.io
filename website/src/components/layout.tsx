@@ -22,6 +22,10 @@ const headerNavItems: IHeaderNavItem[] = [
     to: AppRoutes.Home,
   },
   {
+    content: 'Projects',
+    to: AppRoutes.Projects,
+  },
+  {
     content: 'About',
     to: AppRoutes.About,
   },
