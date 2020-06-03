@@ -5,7 +5,7 @@ import { AppRoutes } from '../utils/constants'
 
 export interface IHeaderNavItem {
   to: AppRoutes
-  content: string | number | React.ReactNode
+  content: string | React.ReactNode
 }
 
 interface IListLinkProps extends GatsbyLinkProps<any> {
