@@ -1,7 +1,6 @@
 import { css } from '@emotion/core'
 import { graphql, Link, StaticQuery } from 'gatsby'
 import React from 'react'
-import { formBlogUrl } from '../utils/misc'
 import { rhythm } from '../utils/typography'
 
 const PostsListPreview = () => (
@@ -32,7 +31,7 @@ const PostsListPreview = () => (
         {data.allMarkdownRemark.edges.map(({ node }: any) => (
           <div key={node.id}>
             <Link
-              to={formBlogUrl(node.fields.slug)}
+              to={node.fields.slug}
               css={css`
                 text-decoration: none;
                 color: inherit;
