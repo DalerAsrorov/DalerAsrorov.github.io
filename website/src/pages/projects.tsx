@@ -40,6 +40,11 @@ const ProjectCard = styled.article`
   margin: ${rhythm(1 / 4)};
   width: ${rhythm(8)};
   height: ${rhythm(15)};
+
+  @media (max-width: 600px) {
+    width: 100%;
+    text-align: center;
+  }
 `
 
 const Description = styled.div`
@@ -61,10 +66,10 @@ const Projects = (props: PageProps) => (
           </Description>
           <Caption>
             <a target="__blank" href={project.code}>
-              <FaCode />
+              <FaCode size={rhythm(1.2)} />
             </a>
             <a target="__blank" href={project.demo}>
-              <FaPlayCircle />
+              <FaPlayCircle size={rhythm(1.2)} />
             </a>
           </Caption>
         </ProjectCard>
