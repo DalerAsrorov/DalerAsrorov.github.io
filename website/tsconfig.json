@@ -9,6 +9,7 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "noUnusedLocals": false,
+    "resolveJsonModule": true,
     "allowJs": true
   },
   "exclude": ["node_modules", "public", ".cache"]
