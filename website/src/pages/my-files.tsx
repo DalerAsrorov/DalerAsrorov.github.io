@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
-const MyFiles = ({ data }) => (
+const MyFiles = ({ data }: any) => (
   <Layout>
     <div>
       <h1>My Site's Files</h1>
@@ -16,7 +16,7 @@ const MyFiles = ({ data }) => (
           </tr>
         </thead>
         <tbody>
-          {data.allFile.edges.map(({ node }, index) => (
+          {data.allFile.edges.map(({ node }: any, index: number) => (
             <tr key={index}>
               <td>{node.relativePath}</td>
               <td>{node.prettySize}</td>
