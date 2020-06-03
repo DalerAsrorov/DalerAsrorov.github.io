@@ -12,8 +12,7 @@
     "serve": "gatsby serve",
     "type-check": "tsc --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@emotion/core": "^10.0.28",
@@ -37,8 +36,14 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-icons": "^3.0.0",
     "@types/vfile-message": "^2.0.0",
+    "husky": "^4.2.5",
     "prettier": "2.0.5",
     "typescript": "^3.9.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run type-check"
+    }
   },
   "repository": {
     "type": "git",
