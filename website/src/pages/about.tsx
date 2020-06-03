@@ -29,7 +29,9 @@ interface IconWrapper {
   Icon: any
 }
 
-const IconWrapper: React.FC = ({ Icon }) => <Icon color="grey" size={30} />
+const IconWrapper: React.FC<IconWrapper> = ({ Icon }) => (
+  <Icon color="grey" size={30} />
+)
 
 const About = () => {
   return (
