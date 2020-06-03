@@ -41,12 +41,6 @@
     "typescript": "^3.9.3",
     "vfile-message": "^2.0.4"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm type-check",
-      "pre-push": "npm type-check"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"

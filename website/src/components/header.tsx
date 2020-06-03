@@ -17,7 +17,7 @@ const ListLink = (props: any) => (
     <Link to={props.to}>{props.children}</Link>
   </li>
 )
-
+//df
 const Header: React.FC = ({ navItems, title }) => (
   <header style={{ marginBottom: rhythm(1.5) }}>
     <Link to="/" style={{ textShadow: 'none', backgroundImage: 'none' }}>
