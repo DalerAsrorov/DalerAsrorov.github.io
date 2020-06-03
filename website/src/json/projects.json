@@ -1,15 +1,15 @@
 [
   {
-    "title": "Britecharts",
-    "description": "A client-side reusable Charting Library based on D3.js v5 that offers easy and intuitive use of charts and components that can be composed together to create amazing visualizations.",
-    "code": "https://github.com/britecharts/britecharts",
-    "demo": "https://britecharts.github.io/britecharts"
-  },
-  {
     "title": "Componofy",
     "description": "A web app that will help you combine personal and public playlists into a new one or merge with existing playlist",
     "code": "https://github.com/DalerAsrorov/componofy",
     "demo": "https://componofy.herokuapp.com/"
+  },
+  {
+    "title": "Britecharts",
+    "description": "A client-side reusable Charting Library based on D3.js v5 that offers easy and intuitive use of charts and components that can be composed together to create amazing visualizations.",
+    "code": "https://github.com/britecharts/britecharts",
+    "demo": "https://britecharts.github.io/britecharts/tutorial-kitchen-sink.html"
   },
   {
     "title": "syncloud-queue",
