@@ -18,13 +18,13 @@ const ListLink = (props: any) => (
   </li>
 )
 
-const Header: React.FC<IHeaderProps> = (props: IHeaderProps) => (
+const Header: React.FC = ({ navItems, title }) => (
   <header style={{ marginBottom: rhythm(1.5) }}>
     <Link to="/" style={{ textShadow: 'none', backgroundImage: 'none' }}>
-      <h3 style={{ display: 'inline' }}>{props.title}</h3>
+      <h3 style={{ display: 'inline' }}>{title}</h3>
     </Link>
     <ul style={{ float: 'right' }}>
-      {props.navItems.map((navItem: IHeaderNavItem) => (
+      {navItems.map((navItem: IHeaderNavItem) => (
         <ListLink to={navItem.to}>{navItem.content}</ListLink>
       ))}
     </ul>
