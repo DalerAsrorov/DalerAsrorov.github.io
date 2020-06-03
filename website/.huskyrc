@@ -1,6 +1,5 @@
 {
   "hooks": {
-    "pre-commit": "npm run type-check",
     "pre-push": "npm run type-check",
   }
 }
