@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Daler's Space`,
+    title: `Daler 🐙's`,
     description: `Daler's personal website and blog made for sharing his ideas, projects, research, and thoughts.`,
   },
   plugins: [
