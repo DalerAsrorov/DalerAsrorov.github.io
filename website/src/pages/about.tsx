@@ -7,6 +7,7 @@ import { PlainList } from '../components/plain-list'
 import myPicture from '../images/me.jpg'
 import { AppRoutes } from '../utils/constants'
 import { rhythm } from '../utils/typography'
+import { IconBaseProps } from 'react-icons/lib/cjs'
 
 const Container = styled.div`
   display: flex;
@@ -27,12 +28,12 @@ const Image = styled.img`
   border: 2px solid hotpink;
 `
 
-interface IconWrapper {
+interface IconWrapper extends IconBaseProps {
   Icon: any
 }
 
-const IconWrapper: React.FC<IconWrapper> = ({ Icon }) => (
-  <Icon color="grey" size={30} />
+const IconWrapper: React.FC<IconWrapper> = ({ Icon, ...restProps }) => (
+  <Icon {...restProps} size={30} />
 )
 
 const About = (props: PageProps) => {
@@ -44,15 +45,15 @@ const About = (props: PageProps) => {
           <PlainList
             items={[
               {
-                content: <IconWrapper Icon={FaGithubAlt} />,
+                content: <IconWrapper color="black" Icon={FaGithubAlt} />,
                 link: 'https://github.com/DalerAsrorov',
               },
               {
-                content: <IconWrapper Icon={FaLinkedin} />,
+                content: <IconWrapper color="skyblue" Icon={FaLinkedin} />,
                 link: 'https://www.linkedin.com/in/dalerasrorov/',
               },
               {
-                content: <IconWrapper Icon={FaSoundcloud} />,
+                content: <IconWrapper color="orange" Icon={FaSoundcloud} />,
                 link: 'https://soundcloud.com/daler-asrorov',
               },
             ]}

@@ -1,8 +1,6 @@
+import styled from '@emotion/styled'
 import React from 'react'
 import { rhythm } from '../utils/typography'
-import styled from '@emotion/styled'
-import { FaGithubAlt } from 'react-icons/fa'
-import { css } from '@emotion/core'
 
 interface IPlainListItem {
   content: any
