@@ -58,7 +58,7 @@ const About = () => {
           />
         </Card>
         <p>
-          I am a software engineer currently working at Capital One building
+          I am a software engineer currently working at Capital One and building
           tools for commercial card platform. I have been working on side
           projects on and off as a way to learn new technologies and found it to
           be most useful way to understand complex concepts more thoroughly.
