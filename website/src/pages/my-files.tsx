@@ -1,9 +1,10 @@
+import { graphql, PageProps } from 'gatsby'
 import React from 'react'
-import { graphql } from 'gatsby'
 import Layout from '../components/layout'
+import { AppRoutes } from '../utils/constants'
 
-const MyFiles = ({ data }: any) => (
-  <Layout>
+const MyFiles = ({ data, path }: PageProps<{ allFile: any }>) => (
+  <Layout currentPath={path as AppRoutes.MyFiles}>
     <div>
       <h1>My Site's Files</h1>
       <table>

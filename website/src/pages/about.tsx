@@ -1,9 +1,11 @@
 import styled from '@emotion/styled'
+import { PageProps } from 'gatsby'
 import React from 'react'
 import { FaGithubAlt, FaLinkedin, FaSoundcloud } from 'react-icons/fa'
 import Layout from '../components/layout'
 import { PlainList } from '../components/plain-list'
 import myPicture from '../images/me.jpg'
+import { AppRoutes } from '../utils/constants'
 import { rhythm } from '../utils/typography'
 
 const Container = styled.div`
@@ -33,9 +35,9 @@ const IconWrapper: React.FC<IconWrapper> = ({ Icon }) => (
   <Icon color="grey" size={30} />
 )
 
-const About = () => {
+const About = (props: PageProps) => {
   return (
-    <Layout>
+    <Layout currentPath={props.path as AppRoutes.About}>
       <Container>
         <Card>
           <Image src={myPicture} />

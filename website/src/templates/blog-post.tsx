@@ -1,13 +1,13 @@
 import { css } from '@emotion/core'
-import { graphql } from 'gatsby'
+import { graphql, PageProps } from 'gatsby'
 import React from 'react'
 import Layout from '../components/layout'
 
-const BlogPost = ({ data }: any) => {
+const BlogPost = ({ data, path }: PageProps<{ markdownRemark: any }>) => {
   const post = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout currentPath={path as any}>
       <h1>{post.frontmatter.title}</h1>
       <p css={css('color: hotpink')}>{post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />

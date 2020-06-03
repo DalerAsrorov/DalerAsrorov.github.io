@@ -17,7 +17,7 @@ export interface IPlainListProps {
 const ListContainer = styled.ul`
   text-align: center;
 
-  li:not(:first-child) {
+  li:not(:first-of-type) {
     margin-left: ${rhythm(1)};
   }
 `
@@ -30,10 +30,10 @@ export const PlainList: React.FC<IPlainListProps> = (
 ) => {
   return (
     <ListContainer>
-      {props.items.map((listItem: IPlainListItem) => (
-        <ListItem {...props}>
-          <a target="_blank" href={listItem.link}>
-            {listItem.content}
+      {props.items.map(({ link, content }: IPlainListItem) => (
+        <ListItem key={link} {...props}>
+          <a target="_blank" href={link}>
+            {content}
           </a>
         </ListItem>
       ))}

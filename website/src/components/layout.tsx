@@ -1,8 +1,9 @@
 import { css, Global } from '@emotion/core'
 import styled from '@emotion/styled'
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
+import { AppRoutes } from '../utils/constants'
 import Header, { IHeaderNavItem } from './header'
-import { StaticQuery, graphql } from 'gatsby'
 
 const Wrapper = styled('div')`
   margin: 3rem auto;
@@ -10,18 +11,23 @@ const Wrapper = styled('div')`
   max-width: 800px;
 `
 
+export interface ILayoutProps {
+  children: any
+  currentPath: AppRoutes
+}
+
 const headerNavItems: IHeaderNavItem[] = [
   {
     content: 'Home',
-    to: '/',
+    to: AppRoutes.Home,
   },
   {
     content: 'About',
-    to: '/about/',
+    to: AppRoutes.About,
   },
 ]
 
-const Layout = ({ children }: any) => {
+const Layout: React.FC<ILayoutProps> = ({ children, currentPath }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -51,6 +57,7 @@ const Layout = ({ children }: any) => {
           <Header
             title={data.site.siteMetadata.title}
             navItems={headerNavItems}
+            path={currentPath}
           />
           {children}
         </Wrapper>
