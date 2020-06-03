@@ -18,7 +18,7 @@ const ListLink = (props: any) => (
   </li>
 )
 //df
-const Header: React.FC = ({ navItems, title }) => (
+const Header: React.FC<IHeaderProps> = ({ navItems, title }) => (
   <header style={{ marginBottom: rhythm(1.5) }}>
     <Link to="/" style={{ textShadow: 'none', backgroundImage: 'none' }}>
       <h3 style={{ display: 'inline' }}>{title}</h3>
