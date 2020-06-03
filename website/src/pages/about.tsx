@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { graphql } from 'gatsby'
 import React from 'react'
 import { FaGithubAlt, FaLinkedin, FaSoundcloud } from 'react-icons/fa'
 import Layout from '../components/layout'
@@ -34,7 +33,7 @@ const IconWrapper: React.FC<IconWrapper> = (props: IconWrapper) => (
   <props.Icon color="grey" size={30} />
 )
 
-const About = ({ data }: any) => {
+const About = () => {
   return (
     <Layout>
       <Container>
@@ -68,15 +67,5 @@ const About = ({ data }: any) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
 
 export default About

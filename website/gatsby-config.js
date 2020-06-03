@@ -5,9 +5,9 @@
  */
 
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
-    title: 'Daler Asrorov - Software Enthusiast',
+    title: `Daler's Space`,
+    description: `Daler's personal website and blog made for sharing his ideas, projects, research, and thoughts.`,
   },
   plugins: [
     'gatsby-plugin-emotion',

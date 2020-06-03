@@ -2,20 +2,31 @@ import { Link } from 'gatsby'
 import React from 'react'
 import { rhythm } from '../utils/typography'
 
-const ListLink = props => (
+export interface IHeaderNavItem {
+  to: string
+  content: string | number | React.ReactNode
+}
+
+export interface IHeaderProps {
+  navItems: IHeaderNavItem[]
+  title: string
+}
+
+const ListLink = (props: any) => (
   <li style={{ display: 'inline-block', marginRight: rhythm(1) }}>
     <Link to={props.to}>{props.children}</Link>
   </li>
 )
 
-const Header = () => (
+const Header: React.FC<IHeaderProps> = (props: IHeaderProps) => (
   <header style={{ marginBottom: rhythm(1.5) }}>
     <Link to="/" style={{ textShadow: 'none', backgroundImage: 'none' }}>
-      <h3 style={{ display: 'inline' }}>Daler's Space</h3>
+      <h3 style={{ display: 'inline' }}>{props.title}</h3>
     </Link>
-    <ul style={{ listStyle: 'none', float: 'right' }}>
-      <ListLink to="/">Home</ListLink>
-      <ListLink to="/about/">About</ListLink>
+    <ul style={{ float: 'right' }}>
+      {props.navItems.map((navItem: IHeaderNavItem) => (
+        <ListLink to={navItem.to}>{navItem.content}</ListLink>
+      ))}
     </ul>
   </header>
 )

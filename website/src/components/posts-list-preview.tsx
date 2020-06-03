@@ -28,7 +28,7 @@ const PostsListPreview = () => (
     render={data => (
       <>
         <h5>{data.allMarkdownRemark.totalCount} Posts Total</h5>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        {data.allMarkdownRemark.edges.map(({ node }: any) => (
           <div key={node.id}>
             <Link
               to={node.fields.slug}
