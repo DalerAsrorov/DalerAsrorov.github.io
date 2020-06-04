@@ -2,7 +2,7 @@
   {
     "title": "dalerasrorov.com",
     "description": "I built my personal website with Gatsby using TypeScript and setting up infrastructure for maintanable development.",
-    "code": "https://github.com/DalerAsrorov/DalerAsrorov.github.io",
+    "code": "https://github.com/DalerAsrorov/DalerAsrorov.github.io/tree/dev/website",
     "demo": "https://www.dalerasrorov.com/"
   },
   {
@@ -20,7 +20,7 @@
   {
     "title": "Britecharts",
     "description": "A client-side reusable Charting Library based on D3.js v5 that offers easy and intuitive use of charts and components that can be composed together to create amazing visualizations.",
-    "code": "https://github.com/DalerAsrorov/DalerAsrorov.github.io/tree/dev/website",
+    "code": "https://github.com/britecharts/britecharts",
     "demo": "https://britecharts.github.io/britecharts/tutorial-kitchen-sink.html"
   }
 ]
