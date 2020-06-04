@@ -69,7 +69,7 @@ const Projects = (props: PageProps) => (
     <Container>
       {projects.map((project: IProject) => (
         <ProjectCard key={project.title}>
-          <h3>{project.title}</h3>
+          <h3 style={{ textAlign: 'center' }}>{project.title}</h3>
           <Description>
             <p>{project.description}</p>
           </Description>

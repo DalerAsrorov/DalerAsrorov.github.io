@@ -1,13 +1,13 @@
 [
   {
     "title": "dalerasrorov.com",
-    "description": "I built my personal website with Gatsby using TypeScript and setting up infrastructure for maintanable development",
+    "description": "I built my personal website with Gatsby using TypeScript and setting up infrastructure for maintanable development.",
     "code": "https://github.com/DalerAsrorov/DalerAsrorov.github.io",
     "demo": "https://www.dalerasrorov.com/"
   },
   {
     "title": "Componofy",
-    "description": "A web app that will help you combine personal and public playlists into a new one or merge with existing playlist",
+    "description": "A web app that will help you combine personal and public playlists into a new one or merge with existing playlist.",
     "code": "https://github.com/DalerAsrorov/componofy",
     "demo": "https://componofy.herokuapp.com/"
   },
