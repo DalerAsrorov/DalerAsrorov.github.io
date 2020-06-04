@@ -31,43 +31,41 @@ const headerNavItems: IHeaderNavItem[] = [
   },
 ]
 
-const Layout: React.FC<ILayoutProps> = ({ children, currentPath }) => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-            }
+const Layout: React.FC<ILayoutProps> = ({ children, currentPath }) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
           }
         }
-      `}
-      render={data => (
-        <Wrapper>
-          <Global
-            styles={css`
-              ul,
-              li {
-                margin: 0;
-                padding: 0;
-              }
+      }
+    `}
+    render={data => (
+      <Wrapper>
+        <Global
+          styles={css`
+            ul,
+            li {
+              margin: 0;
+              padding: 0;
+            }
 
-              ul {
-                list-style: none;
-              }
-            `}
-          />
-          <Header
-            title={data.site.siteMetadata.title}
-            navItems={headerNavItems}
-            path={currentPath}
-          />
-          {children}
-        </Wrapper>
-      )}
-    />
-  )
-}
+            ul {
+              list-style: none;
+            }
+          `}
+        />
+        <Header
+          title={data.site.siteMetadata.title}
+          navItems={headerNavItems}
+          path={currentPath}
+        />
+        {children}
+      </Wrapper>
+    )}
+  />
+)
 
 export default Layout
