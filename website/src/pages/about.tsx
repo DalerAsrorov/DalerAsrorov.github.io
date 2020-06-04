@@ -11,7 +11,11 @@ import { IconBaseProps } from 'react-icons/lib/cjs'
 
 const Container = styled.div`
   display: flex;
-  overflow: auto;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const Card = styled.article`
