@@ -18,8 +18,8 @@ const Container = styled.div`
   clear: both;
 `
 
-const Caption = styled.caption`
-  display: block;
+const Caption = styled.section`
+  text-align: center;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -33,7 +33,7 @@ const Caption = styled.caption`
   }
 `
 
-const ProjectCard = styled.article`
+const ProjectCard = styled.section`
   position: relative;
   float: left;
   padding: ${rhythm(1 / 4)};

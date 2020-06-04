@@ -13,13 +13,6 @@ const LinkContainer = styled.li`
   margin-right: ${rhythm(1 / 2)};
 `
 
-const toggleBackgroundColor = (currentPath: AppRoutes, to: string) =>
-  currentPath === to
-    ? {
-        backgroundColor: 'lightcyan',
-      }
-    : {}
-
 export const ListLink: React.FC<IListLinkProps> = ({
   children,
   currentPath,
@@ -29,8 +22,8 @@ export const ListLink: React.FC<IListLinkProps> = ({
     <Link
       style={{
         padding: rhythm(1 / 4),
-        ...toggleBackgroundColor(currentPath, to),
       }}
+      activeStyle={{ color: 'hotpink' }}
       to={to}
     >
       {children}
