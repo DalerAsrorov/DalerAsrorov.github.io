@@ -1,15 +1,12 @@
-import { Link, GatsbyLinkProps } from 'gatsby'
+import { Link } from 'gatsby'
 import React from 'react'
-import { rhythm } from '../utils/typography'
 import { AppRoutes } from '../utils/constants'
+import { rhythm } from '../utils/typography'
+import { ListLink } from './common/list-link'
 
 export interface IHeaderNavItem {
   to: AppRoutes
   content: string | React.ReactNode
-}
-
-interface IListLinkProps extends GatsbyLinkProps<any> {
-  currentPath: AppRoutes
 }
 
 export interface IHeaderProps {
@@ -17,26 +14,6 @@ export interface IHeaderProps {
   title: string
   path: AppRoutes
 }
-
-const ListLink = (props: IListLinkProps) => (
-  <li
-    style={{
-      display: 'inline-block',
-      marginRight: rhythm(1),
-    }}
-  >
-    <Link
-      style={{
-        padding: rhythm(1 / 4),
-        backgroundColor: props.currentPath === props.to ? 'lightcyan' : '',
-      }}
-      to={props.to}
-    >
-      {props.children}
-    </Link>
-  </li>
-)
-
 const Header: React.FC<IHeaderProps> = ({ navItems, title, path }) => (
   <header style={{ marginBottom: rhythm(1.5) }}>
     <Link to="/" style={{ textShadow: 'none', backgroundImage: 'none' }}>
