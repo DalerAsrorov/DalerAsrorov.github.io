@@ -55,6 +55,13 @@ const Description = styled.div`
   height: ${rhythm(9)};
   margin-top: ${rhythm(1)};
   display: flex;
+
+  > p {
+    @media (max-width: 600px) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
 `
 
 const Projects = (props: PageProps) => (
