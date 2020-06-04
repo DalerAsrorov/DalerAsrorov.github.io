@@ -15,7 +15,11 @@ export interface IProject {
 }
 
 const Container = styled.div`
-  clear: both;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
 `
 
 const Caption = styled.section`
@@ -38,21 +42,19 @@ const ProjectCard = styled.section`
   float: left;
   padding: ${rhythm(1 / 4)};
   margin: ${rhythm(1 / 4)};
-  width: ${rhythm(8)};
+  width: ${rhythm(9)};
   height: ${rhythm(15)};
+  flex: 1;
 
   @media (max-width: 600px) {
-    width: 100%;
     text-align: center;
   }
 `
 
 const Description = styled.div`
   height: ${rhythm(9)};
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: flex;
   margin-top: ${rhythm(1)};
+  display: flex;
 `
 
 const Projects = (props: PageProps) => (
