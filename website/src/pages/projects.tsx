@@ -22,7 +22,7 @@ const Container = styled.div`
   align-items: flex-end;
 `
 
-const Caption = styled.section`
+const Caption = styled.div`
   text-align: center;
   position: absolute;
   bottom: 0;
@@ -39,15 +39,16 @@ const Caption = styled.section`
 
 const ProjectCard = styled.section`
   position: relative;
-  float: left;
   padding: ${rhythm(1 / 4)};
   margin: ${rhythm(1 / 4)};
   width: ${rhythm(9)};
-  height: ${rhythm(15)};
+  height: ${rhythm(14)};
   flex: 1;
 
-  @media (max-width: 600px) {
-    text-align: center;
+  @media (max-width: 690px) {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    height: ${rhythm(12)};
   }
 `
 
@@ -56,8 +57,8 @@ const Description = styled.div`
   margin-top: ${rhythm(1)};
   display: flex;
 
-  > p {
-    @media (max-width: 600px) {
+  @media (max-width: 690px) {
+    > p {
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -69,7 +70,9 @@ const Projects = (props: PageProps) => (
     <Container>
       {projects.map((project: IProject) => (
         <ProjectCard key={project.title}>
-          <h3 style={{ textAlign: 'center' }}>{project.title}</h3>
+          <h3 style={{ textAlign: 'center', marginTop: rhythm(1 / 2) }}>
+            {project.title}
+          </h3>
           <Description>
             <p>{project.description}</p>
           </Description>

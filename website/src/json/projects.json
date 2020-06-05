@@ -13,7 +13,7 @@
   },
   {
     "title": "syncloud-queue",
-    "description": "Quickly create real-time playlist from SoundCloud and set to autoplay.",
+    "description": "Quickly create a real-time playlist from SoundCloud and set it to autoplay.",
     "code": "https://github.com/DalerAsrorov/syncloud-queue",
     "demo": "https://dalerasrorov.github.io/syncloud-queue"
   },
