@@ -25,7 +25,7 @@
   },
   {
     "title": "Britecharts React",
-    "description": "A client-side reusable Charting Library based on D3.js v5 that offers easy and intuitive use of charts and components that can be composed together to create amazing visualizations.",
+    "description": "A React wrapper for the Britecharts charting library. It allows the use of Britecharts charts and modules in a React ecosystem.",
     "code": "https://github.com/britecharts/britecharts-react",
     "demo": "https://britecharts.github.io/britecharts-react/"
   }
