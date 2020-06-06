@@ -31,9 +31,9 @@ const Caption = styled.div`
 
 const Container = styled.div`
   display: flex;
-  margin: -${rhythm(1 / 4)};
+  flex-wrap: wrap;
   flex-direction: row;
-  flex-flow: wrap;
+  margin: -${rhythm(1 / 4)};
   justify-content: flex-end;
   align-items: flex-end;
 `
