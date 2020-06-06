@@ -14,14 +14,6 @@ export interface IProject {
   demo: string
 }
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
-  justify-content: flex-end;
-  align-items: flex-end;
-`
-
 const Caption = styled.div`
   text-align: center;
   position: absolute;
@@ -37,13 +29,21 @@ const Caption = styled.div`
   }
 `
 
+const Container = styled.div`
+  display: flex;
+  margin: -${rhythm(1 / 4)};
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+`
+
 const ProjectCard = styled.section`
   position: relative;
-  padding: ${rhythm(1 / 4)};
   margin: ${rhythm(1 / 4)};
   width: ${rhythm(9)};
   height: ${rhythm(14)};
-  flex: 1;
+  flex: auto;
 
   @media (max-width: 690px) {
     flex-basis: 100%;
