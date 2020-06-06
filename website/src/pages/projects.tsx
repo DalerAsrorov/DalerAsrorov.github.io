@@ -39,11 +39,11 @@ const Container = styled.div`
 `
 
 const ProjectCard = styled.section`
+  flex: auto;
   position: relative;
   margin: ${rhythm(1 / 4)};
   width: ${rhythm(9)};
   height: ${rhythm(14)};
-  flex: auto;
 
   @media (max-width: 690px) {
     flex-basis: 100%;
