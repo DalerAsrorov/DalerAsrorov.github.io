@@ -31,19 +31,19 @@ const Caption = styled.div`
 
 const Container = styled.div`
   display: flex;
-  margin: -${rhythm(1 / 4)};
+  flex-wrap: wrap;
   flex-direction: row;
-  flex-flow: wrap;
+  margin: -${rhythm(1 / 4)};
   justify-content: flex-end;
   align-items: flex-end;
 `
 
 const ProjectCard = styled.section`
+  flex: auto;
   position: relative;
   margin: ${rhythm(1 / 4)};
   width: ${rhythm(9)};
-  height: ${rhythm(14)};
-  flex: auto;
+  height: ${rhythm(12)};
 
   @media (max-width: 690px) {
     flex-basis: 100%;

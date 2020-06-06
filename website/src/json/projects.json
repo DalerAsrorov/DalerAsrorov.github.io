@@ -1,7 +1,13 @@
 [
   {
+    "title": "Britecharts",
+    "description": "Main contributor of the client-side reusable Charting Library based on D3.js v5 that offers easy and intuitive use of charts and components that can be composed together to create amazing visualizations.",
+    "code": "https://github.com/britecharts/britecharts",
+    "demo": "https://britecharts.github.io/britecharts/tutorial-kitchen-sink.html"
+  },
+  {
     "title": "dalerasrorov.com",
-    "description": "I built my personal website with Gatsby using TypeScript and setting up infrastructure for maintanable development.",
+    "description": "I built my personal website with Gatsby using React and TypeScript. Set up a custom infrastructure of the website for maintainable and enjoyable development.",
     "code": "https://github.com/DalerAsrorov/DalerAsrorov.github.io/tree/dev/website",
     "demo": "https://www.dalerasrorov.com/"
   },
@@ -18,9 +24,9 @@
     "demo": "https://dalerasrorov.github.io/syncloud-queue"
   },
   {
-    "title": "Britecharts",
+    "title": "Britecharts React",
     "description": "A client-side reusable Charting Library based on D3.js v5 that offers easy and intuitive use of charts and components that can be composed together to create amazing visualizations.",
-    "code": "https://github.com/britecharts/britecharts",
-    "demo": "https://britecharts.github.io/britecharts/tutorial-kitchen-sink.html"
+    "code": "https://github.com/britecharts/britecharts-react",
+    "demo": "https://britecharts.github.io/britecharts-react/"
   }
 ]
