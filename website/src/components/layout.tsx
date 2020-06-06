@@ -5,7 +5,7 @@ import React from 'react'
 import { AppRoutes } from '../utils/constants'
 import Header, { IHeaderNavItem } from './header'
 
-const Wrapper = styled('div')`
+const Wrapper = styled.main`
   margin: 3rem auto;
   padding: 0 1rem;
   max-width: 800px;
@@ -13,7 +13,6 @@ const Wrapper = styled('div')`
 
 export interface ILayoutProps {
   children: any
-  currentPath: AppRoutes
 }
 
 const headerNavItems: IHeaderNavItem[] = [
@@ -31,7 +30,7 @@ const headerNavItems: IHeaderNavItem[] = [
   },
 ]
 
-const Layout: React.FC<ILayoutProps> = ({ children, currentPath }) => (
+const Layout: React.FC<ILayoutProps> = ({ children }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -60,7 +59,6 @@ const Layout: React.FC<ILayoutProps> = ({ children, currentPath }) => (
         <Header
           title={data.site.siteMetadata.title}
           navItems={headerNavItems}
-          path={currentPath}
         />
         {children}
       </Wrapper>

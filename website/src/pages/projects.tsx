@@ -1,11 +1,10 @@
+import styled from '@emotion/styled'
 import { PageProps } from 'gatsby'
 import * as React from 'react'
-import Layout from '../components/layout'
-import { AppRoutes } from '../utils/constants'
-import projects from '../json/projects.json'
-import styled from '@emotion/styled'
-import { rhythm } from '../utils/typography'
 import { FaCode, FaPlayCircle } from 'react-icons/fa'
+import Layout from '../components/layout'
+import projects from '../json/projects.json'
+import { rhythm } from '../utils/typography'
 
 export interface IProject {
   title: string
@@ -65,8 +64,8 @@ const Description = styled.div`
   }
 `
 
-const Projects = (props: PageProps) => (
-  <Layout currentPath={props.path as AppRoutes.Projects}>
+const Projects: React.FC<PageProps> = () => (
+  <Layout>
     <Container>
       {projects.map((project: IProject) => (
         <ProjectCard key={project.title}>

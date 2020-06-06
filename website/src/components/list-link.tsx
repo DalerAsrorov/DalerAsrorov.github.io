@@ -1,23 +1,17 @@
 import { GatsbyLinkProps, Link } from 'gatsby'
 import React from 'react'
-import { AppRoutes } from '../../utils/constants'
-import { rhythm } from '../../utils/typography'
+import { AppRoutes } from '../utils/constants'
+import { rhythm } from '../utils/typography'
 import styled from '@emotion/styled'
 
-interface IListLinkProps extends GatsbyLinkProps<any> {
-  currentPath: AppRoutes
-}
+interface IListLinkProps extends GatsbyLinkProps<any> {}
 
 const LinkContainer = styled.li`
   display: inline-block;
   margin-right: ${rhythm(1 / 2)};
 `
 
-export const ListLink: React.FC<IListLinkProps> = ({
-  children,
-  currentPath,
-  to,
-}) => (
+export const ListLink: React.FC<IListLinkProps> = ({ children, to }) => (
   <LinkContainer>
     <Link
       style={{

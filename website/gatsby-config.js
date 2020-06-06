@@ -1,13 +1,26 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
+// site metadata
+const siteTitle = `Daler 🐙's`
+const siteDescription = `Daler's personal website and blog made for sharing his ideas, projects, research, and thoughts.`
+const siteUrl = 'https://www.dalerasrorov.com'
+const siteKeywords = [
+  'Daler',
+  'Asrorov',
+  'software engineer',
+  'developer',
+  'personal website',
+  'blog',
+  'projects',
+  'tech',
+]
+const siteImage = `${siteUrl}/icons/icon_512x512.png`
 
 module.exports = {
   siteMetadata: {
-    title: `Daler 🐙's`,
-    description: `Daler's personal website and blog made for sharing his ideas, projects, research, and thoughts.`,
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+    keywords: siteKeywords,
+    image: siteImage,
   },
   plugins: [
     'gatsby-plugin-emotion',
