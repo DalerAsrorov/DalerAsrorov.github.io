@@ -43,7 +43,7 @@ const ProjectCard = styled.section`
   position: relative;
   margin: ${rhythm(1 / 4)};
   width: ${rhythm(9)};
-  height: ${rhythm(14)};
+  height: ${rhythm(12)};
 
   @media (max-width: 690px) {
     flex-basis: 100%;
