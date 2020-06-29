@@ -16,4 +16,12 @@ So, I am glad you got a little bit of context before I move forward to the fourt
 1. I was young and full of potential (Yes, I was. Believe me.)
 1. _I could learn [React](https://reactjs.org/)_ fast.
 
-React is a JavaScript library. You don't need to know much about it, but just know it helped me write a lot less JavaScript code than I would have otherwise had to write if I haven't used it ...to be continued
+React is a JavaScript library. You don't need to know much about it, but just know it helped me write a lot less JavaScript code than I would have otherwise had to write if I haven't used it. Nevertheless, before I started digging deep into React world I asked myself this question: how can I learn React in a way that could help people and make the learning experience more enjoyable? **I believe it is truly important to enjoy the learning experience in order to facilitate meaningful and comprehensive learning experience.** As a result, I made a decision to build a web application that will allow Spotify users to make cool playlists by combining songs from different, personal and public, playlists together. I named the app with one of the coolest generic endings you could find out there - _Componofy_.
+
+After numerous errors and sleepless nights I was able to build a fully functional React application that made me realize how cool this JavaScript library actually is. I remember how my ex-girlfriend and I were QA-testing the application and found a bunch of bugs that I had to fix and enhance overall user experience to make it usable for the people around the world. It was one of the most memorable experiences I have had in my life and that's why this project is so important to me. This is the very first project that made me believe that I can build production ready applications that is now used by dozens.
+
+At the end of the day, I was given a new offer from Eventbrite to join the checkout team. The main takeaway from this story is short and sweet - _always be prepared for new challenges by learning relevant things_. The main motivator for me to learn is the idea that I can help other people solve daily tasks with software. I hope you can find your own reason or motivation to learn and build new cool things.
+
+Cheers and love,
+
+_Daler_
