@@ -1,9 +1,12 @@
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader'
 import { css, Global } from '@emotion/core'
 import styled from '@emotion/styled'
 import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import { AppRoutes } from '../utils/constants'
 import Header, { IHeaderNavItem } from './header'
+
+deckDeckGoHighlightElement()
 
 const Wrapper = styled.main`
   margin: 3rem auto;
@@ -53,6 +56,10 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => (
 
             ul {
               list-style: none;
+            }
+
+            img[src~='post-image'] {
+              height: 400px;
             }
           `}
         />
