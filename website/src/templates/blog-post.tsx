@@ -1,5 +1,6 @@
 import { css } from '@emotion/core'
 import { graphql, PageProps } from 'gatsby'
+import Img from 'gatsby-image'
 import React from 'react'
 import Layout from '../components/layout'
 import { SEO } from '../components/seo'
@@ -9,6 +10,7 @@ const BlogPost: React.FC<PageProps<{ markdownRemark: any }>> = ({
   location,
 }) => {
   const post = data.markdownRemark
+  const featuredImgFluid = post.frontmatter.featuredImage?.childImageSharp.fluid
 
   return (
     <Layout>
@@ -19,6 +21,15 @@ const BlogPost: React.FC<PageProps<{ markdownRemark: any }>> = ({
         pathname={location.pathname}
       />
       <h1>{post.frontmatter.title}</h1>
+      {featuredImgFluid && (
+        <Img
+          fluid={featuredImgFluid}
+          alt={`Featured image for ${post.frontmatter.title} post.`}
+          title={post.frontmatter.title}
+          style={{ marginBottom: '1rem ' }}
+          fadeIn
+        />
+      )}
       <p css={css('color: hotpink')}>{post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
@@ -32,6 +43,13 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 700) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
