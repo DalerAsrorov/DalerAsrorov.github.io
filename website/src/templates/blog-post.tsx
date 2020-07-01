@@ -26,6 +26,7 @@ const BlogPost: React.FC<PageProps<{ markdownRemark: any }>> = ({
           fluid={featuredImgFluid}
           alt={`Featured image for ${post.frontmatter.title} post.`}
           title={post.frontmatter.title}
+          style={{ marginBottom: '1rem ' }}
           fadeIn
         />
       )}

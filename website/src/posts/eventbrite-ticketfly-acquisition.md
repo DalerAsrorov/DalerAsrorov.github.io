@@ -22,6 +22,6 @@ After numerous errors and sleepless nights I was able to build a fully functiona
 
 At the end of the day, I was given a new offer from Eventbrite to join the checkout team. The main takeaway from this story is short and sweet - _always be prepared for new challenges by learning relevant things_. The main motivator for me to learn is the idea that I can help other people solve daily tasks with software. I hope you can find your own reason or motivation to learn and build new cool things.
 
-Cheers and love,
+Cheers,
 
 _Daler_

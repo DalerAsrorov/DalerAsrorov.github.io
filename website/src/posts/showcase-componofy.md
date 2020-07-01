@@ -38,5 +38,17 @@ There is four main views:
   - create a new playlist out of the collection with new playlist cover image
   - merge collection of songs with the user's existing playlist
 
-A UI flow that would accurately represent how the user navigates between pages:
-<img src="../images/post-image-componofy-ui-flows.png" />
+The UI flows that would accurately represent how the user navigates between pages:
+<img src="../images/post-image-componofy-ui.png" />
+
+In addition to creating great playlists, I added a feature that can help users re-order tracks of their personal playlists using [`react-beautiful-dnd`](https://react-beautiful-dnd.netlify.app/?path=/story/single-vertical-list--basic):
+
+> ![Componofy: reordering playlist tracks](../images/post-image-reorder_my_playlist_tracks_snippet.gif)
+
+#### Conclusion
+
+Componofy is one of the most memorable projects I have worked on because it involved a thorough planning and development on both backend and frontend sides. It was great to dive deeply into React ecosystem and learn new server-side Node.js framework. In addition, I developed ways on how to analyze public APIs and integrate various APIs in a single page application (SPA). The Spotify API is quite scalable and reliable; Spotify engineers did an amazing job at providing thorough documentation that explains different parts of Spotify infrastructure that allow 3rd party developers build great apps for Spotify users. Even though it's been 2 years since I built this web application, I do not have trouble maintaining the application as well as modifying or creating new features for it. Using Google Analytics I am happy to see new users visiting app after I published it and hope to maintain it as well as build new apps that would be as fun to build as this one.
+
+Cheers,
+
+_Daler_
