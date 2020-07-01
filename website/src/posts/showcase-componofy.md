@@ -27,4 +27,16 @@ Once the user agrees with the terms to allow developer have access to Spotify da
 
 #### Frontend
 
-The frontend side
+The frontend side of the application is written in [React](https://reactjs.org/) and utilizes various React packages to achieve crucial goals like routing between pages, dragging and dropping list items to re-order personal playlist tracks, displaying modals, and much more. In addition, I used [Material UI library](https://material-ui.com/).
+
+There is four main views:
+
+- User's playlists
+- Public playlists integrated with search
+- Final collection of playlists (public and personal) that contain selected songs for final processing
+- Fullscreen dialog where the user can:
+  - create a new playlist out of the collection with new playlist cover image
+  - merge collection of songs with the user's existing playlist
+
+A UI flow that would accurately represent how the user navigates between pages:
+<img src="../images/post-image-componofy-ui-flows.png" />
