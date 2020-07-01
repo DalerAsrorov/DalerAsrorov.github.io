@@ -48,6 +48,12 @@ const Layout: React.FC<ILayoutProps> = ({ children }) => (
       <Wrapper>
         <Global
           styles={css`
+            ul,
+            li {
+              margin: 0;
+              padding: 0;
+            }
+
             img[src~='post-image'] {
               min-height: 600px;
               max-height: 600px;
