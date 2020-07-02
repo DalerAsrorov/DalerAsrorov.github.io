@@ -35,8 +35,8 @@ The frontend side of the application is written in [React](https://reactjs.org/)
 
 The application contains 4 main views and the final view contains 2 subviews:
 
-- View with User's personal playlists
-- View with public playlists integrated with Spotify playlists search
+- View with personal playlists of the current user.
+- View with public playlists integrated with Spotify playlists search.
 - View with final collection of playlists (both public and/or personal) that contain selected tracks for the final steps.
 - View with Fullscreen dialog where the user can:
   - create a new playlist out of the selected collection of playlist tracks, with an option do add playlist cover image.
