@@ -23,7 +23,7 @@ const permissionScopes = [
 SpotifyAPI.createAuthorizeURL(permissionScopes, 'spotify-auth')
 ```
 
-Each permission gives the developer access to perform a related set of API calls that supply the app with access to user's Spotify data such as personal playlists, access to modifying personal playlists including re-ordering playlist tracks, and add cover image for the user playlists. The generated url contains a Spotify authentication page that asks the user for the specified permissions - this authentication page is shown to first-time users only. The following screen then should appear when the user is redirected:
+Each permission gives the developer access to perform a related set of API calls that supply the app with access to user's Spotify data such as personal playlists, access to modifying personal playlists including re-ordering playlist tracks as well as an ability to add cover images for personal playlists. So, the generated url returned by `createAuthorizeURL` contains Spotify authentication page that asks the user for the specified permissions - this authentication page is shown to first-time users only. The following screen then should appear when the user is redirected:
 
 <img src="../images/post-image-spotify-oauth.png" />
 
