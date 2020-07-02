@@ -40,18 +40,18 @@ SpotifyAPI.createAuthorizeURL(permissionScopes, &#39;spotify-auth&#39;)</code>
 <p>The frontend side of the application is written in <a href="https://reactjs.org/">React</a>, a JavaScript library that gives developer necessary tools to build web applications in a functional and declarative way. Also, I installed various React packages to achieve crucial goals like routing between pages, dragging and dropping list items to re-order personal playlist tracks, and UI themed components. I went with one of the most popular UI themed components out there, the <a href="https://material-ui.com/">Material UI library</a>. Material UI helped me focus more on the main functionalities of the app rather than spending a lot of time on writing custom CSS. It significantly reduced the total development time. If you are working on side projects, I highly recommend you to check out some of <a href="https://blog.logrocket.com/top-10-react-component-libraries-for-2020/">the most popular React UI libraries out there</a>.</p>
 <p>The application contains 4 main views and the final view contains 2 subviews:</p>
 <ul>
+<li>View with the button "Start" to login the user through Spotify.</li>
 <li>View with personal playlists of the current user.</li>
 <li>View with public playlists integrated with Spotify playlists search.</li>
-<li>View with final collection of playlists (both public and/or personal) that contain selected tracks for the final steps.</li>
 <li>
-<p>View with Fullscreen dialog where the user can:</p>
+<p>View with final collection of playlists (both public and/or personal) that contain selected tracks for the final steps. This view contains 2 subviews:</p>
 <ul>
-<li>create a new playlist out of the selected collection of playlist tracks, with an option do add playlist cover image.</li>
-<li>merge collection of tracks with a playlist the the user owns already, with an option to add playlist cover image.</li>
+<li>Fullscreen dialog for creating a new playlist out of the selected collection of playlist tracks, Has an option to add playlist cover image.</li>
+<li>Fullscreen dialog for adding the selected collection of tracks to the existing personal playlist. Has an option to add playlist cover image.</li>
 </ul>
 </li>
 </ul>
-<p>The UI flows that would accurately represent how the user can navigate between application pages:
+<p>The UI flows that would accurately represent how the user can navigate between the application views mentioned above:
 <span class="gatsby-resp-image-wrapper" style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 400px; ">
       <a class="gatsby-resp-image-link" href="/static/f10eaa6d8f2fabefd9028066f2e7e828/32ac3/post-image-componofy-ui.png" style="display: block" target="_blank" rel="noopener">
     <span class="gatsby-resp-image-background-image" style="padding-bottom: 83%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsSAAALEgHS3X78AAAB0ElEQVQ4y32U6bKCMAyFef839JcrOK4olJ2S2y8aBlBvZzoFkpyek4Xo+XzK4XCQ4/Eo9/tdWMMwyHR5P0hRFOKckyzLpOu6r36sqCxLdSSA57Zt1cBpgTzvdjtZr9ey2WwkTdMRbAka9X2vgXVd64emacUVjSQJjG/hexNYlXI+n+XxeAR7I3meC3EGOAWNADNQDJxt22mQsQSUlFRV+b60mQHOGGIkyDbv8r7VJJdVLdfrVS+pqkrPpu1mDA04shfvvXxbVd0HkG4sDn7souw/fMGJprS5/Xa7jZu8Zbn7Ku1yvWtX4He5XDR2xtAAt9utrFYrbaUkSUIH5F+Zx/FB/fDf7/eahg9AEk1LwIyCDIMPl9Qhr720nQ859ZoC3tP0xQ75Y+6XgIAgwwBZzhUK0Pch8L15Bow2MiLWdtFURhcMUMeRZp82+iz5gRUTxiZNDMUISEBROJXmXB0M1azH8ryQ9JFJU9cqi8BpgaYKtcqgUyVkIgPJfHu1iVe2p9NJC0R+2cZ6CTyOnrZBAEWCSn9PDYCc+ABospZjN2tsZMCK0sdxPI6cAWKHOT8G/jT/jZ0CEoQDjuZsU2Ps2CTf5v7Xn+ajyssx+m/9sv8BVzwyt/PpNIIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;"></span>
