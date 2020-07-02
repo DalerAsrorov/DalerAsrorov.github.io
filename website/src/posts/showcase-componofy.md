@@ -35,14 +35,14 @@ The frontend side of the application is written in [React](https://reactjs.org/)
 
 The application contains 4 main views and the final view contains 2 subviews:
 
+- View with the button "Start" to login the user through Spotify.
 - View with personal playlists of the current user.
 - View with public playlists integrated with Spotify playlists search.
-- View with final collection of playlists (both public and/or personal) that contain selected tracks for the final steps.
-- View with Fullscreen dialog where the user can:
-  - create a new playlist out of the selected collection of playlist tracks, with an option do add playlist cover image.
-  - merge collection of tracks with a playlist the the user owns already, with an option to add playlist cover image.
+- View with final collection of playlists (both public and/or personal) that contain selected tracks for the final steps. This view contains 2 subviews:
+  - Fullscreen dialog for creating a new playlist out of the selected collection of playlist tracks, Has an option to add playlist cover image.
+  - Fullscreen dialog for adding the selected collection of tracks to the existing personal playlist. Has an option to add playlist cover image.
 
-The UI flows that would accurately represent how the user can navigate between application pages:
+The UI flows that would accurately represent how the user can navigate between the application views mentioned above:
 <img src="../images/post-image-componofy-ui.png" />
 
 In addition to creating great playlists, I added a feature that can help users re-order tracks of their personal playlists using [`react-beautiful-dnd`](https://react-beautiful-dnd.netlify.app/?path=/story/single-vertical-list--basic):
