@@ -2,6 +2,7 @@ import { css } from '@emotion/core';
 import { graphql, Link, StaticQuery } from 'gatsby';
 import React from 'react';
 import { rhythm } from '../utils/typography';
+import { BlogPostPreview } from './blog-post-preview';
 
 const PostsListPreview = () => (
   <StaticQuery
@@ -35,31 +36,13 @@ const PostsListPreview = () => (
         <>
           <h5>{pageHeader}</h5>
           {data.allMarkdownRemark.edges.map(({ node }: any) => (
-            <div key={node.id}>
-              <Link
-                to={node.fields.slug}
-                css={css`
-                  text-decoration: none;
-                  color: inherit;
-                `}
-              >
-                <h3
-                  css={css`
-                    margin-bottom: ${rhythm(1 / 4)};
-                  `}
-                >
-                  {node.frontmatter.title}{' '}
-                  <span
-                    css={css`
-                      color: #bbb;
-                    `}
-                  >
-                    — {node.frontmatter.date}
-                  </span>
-                </h3>
-                <p>{node.excerpt}</p>
-              </Link>
-            </div>
+            <BlogPostPreview
+              key={node.id}
+              slug={node.fields.slug}
+              title={node.frontmatter.title}
+              date={node.frontmatter.date}
+              excerpt={node.excerpt}
+            />
           ))}
         </>
       );

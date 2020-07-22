@@ -2,6 +2,7 @@ import { graphql, Link, PageProps } from 'gatsby';
 import React from 'react';
 import Layout from '../components/layout';
 import { SEO } from '../components/seo';
+import { BlogPostPreview } from '../components/blog-post-preview';
 
 export interface TagsPageDataProps {
   allMarkdownRemark: {
@@ -36,18 +37,20 @@ const Tags: React.FC<PageProps<TagsPageDataProps, TagsPageContextProps>> = ({
         pathname={pathName}
       />
       <h3>{tagHeader}</h3>
+      <Link to="/tags">All tags</Link>
       <ul>
         {edges.map(({ node }: any) => {
-          const { slug } = node.fields;
-          const { title } = node.frontmatter;
           return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
+            <BlogPostPreview
+              key={node.id}
+              slug={node.fields.slug}
+              title={node.frontmatter.title}
+              date={node.frontmatter.date}
+              excerpt={node.excerpt}
+            />
           );
         })}
       </ul>
-      <Link to="/tags">All tags</Link>
     </Layout>
   );
 };
@@ -62,12 +65,15 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          id
           fields {
             slug
           }
           frontmatter {
             title
+            date(formatString: "DD MMMM, YYYY")
           }
+          excerpt
         }
       }
     }
