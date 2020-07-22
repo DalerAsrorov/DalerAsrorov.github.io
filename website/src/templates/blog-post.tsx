@@ -28,11 +28,11 @@ const TagsList: React.FC<{ tags: string[] }> = ({ tags }) => {
 const BlogPost: React.FC<PageProps<{
   markdownRemark: {
     html: string;
+    excerpt: string;
     frontmatter: {
       title: string;
       date: string;
       description: string;
-      excerpt: string;
       tags: string[];
       featuredImage?: any;
     };
