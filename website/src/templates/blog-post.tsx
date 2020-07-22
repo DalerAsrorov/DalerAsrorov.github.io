@@ -25,7 +25,7 @@ const TagsList: React.FC<{ tags: string[] }> = ({ tags }) => {
   );
 };
 
-const BlogPost: React.FC<PageProps<{
+export interface BlogPostDataProps {
   markdownRemark: {
     html: string;
     excerpt: string;
@@ -37,10 +37,17 @@ const BlogPost: React.FC<PageProps<{
       featuredImage?: any;
     };
   };
-}>> = ({ data, location }) => {
+}
+
+const BlogPost: React.FC<PageProps<BlogPostDataProps>> = ({
+  data,
+  location,
+}) => {
   const post = data.markdownRemark;
   const featuredImgFluid =
     post.frontmatter.featuredImage?.childImageSharp.fluid;
+  const pathName =
+    typeof window !== `undefined` ? location.pathname : undefined;
 
   return (
     <Layout>
@@ -48,7 +55,7 @@ const BlogPost: React.FC<PageProps<{
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
         keywords={post.frontmatter.tags}
-        pathname={location.pathname}
+        pathname={pathName}
       />
       <h1>{post.frontmatter.title}</h1>
       {featuredImgFluid && (

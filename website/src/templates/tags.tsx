@@ -24,6 +24,8 @@ const Tags: React.FC<PageProps<TagsPageDataProps, TagsPageContextProps>> = ({
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
   } tagged with "${tag}"`;
+  const pathName =
+    typeof window !== `undefined` ? location.pathname : undefined;
 
   return (
     <Layout>
@@ -31,7 +33,7 @@ const Tags: React.FC<PageProps<TagsPageDataProps, TagsPageContextProps>> = ({
         title={`Posts with a tag ${tag}`}
         description={`Posts with a tag ${tag}`}
         keywords={tag}
-        pathname={location.pathname}
+        pathname={pathName}
       />
       <h1>{tagHeader}</h1>
       <ul>
