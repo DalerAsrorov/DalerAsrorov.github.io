@@ -1,6 +1,7 @@
 ---
 title: 'Story Time - Eventbrite Acquisition of Ticketfly'
 date: '2020-06-22'
+tags: ['story', 'personal', 'non-tech']
 ---
 
 It was a hot day of summer in San Francisco, July 4, 2017. Coming home after celebrating Independence Day with my friends left me ecstatic and unusually ambitious for the rest of the day. I left the celebration around 8PM. As I was walking home I was wondering in my thoughts as I tend to do after being filled with different emotions - mostly positive ones. At that time I worked at Ticketfly, which was one of the Pandora Radio subsidiaries. A few weeks ago, I learned that Eventbrite was [going to acquire Ticketfly off Pandora Radio](https://techcrunch.com/2017/06/09/pandora-raises-480m-from-siriusxm-sells-ticketfly-to-eventbrite-for-200m/).
