@@ -35,7 +35,7 @@ const Tags: React.FC<PageProps<TagsPageDataProps, TagsPageContextProps>> = ({
         keywords={tag}
         pathname={pathName}
       />
-      <h1>{tagHeader}</h1>
+      <h3>{tagHeader}</h3>
       <ul>
         {edges.map(({ node }: any) => {
           const { slug } = node.fields;

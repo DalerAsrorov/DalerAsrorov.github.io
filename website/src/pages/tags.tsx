@@ -24,7 +24,7 @@ const TagsPage: React.FC<PageProps<{
       pathname={location.pathname}
     />
     <div>
-      <h1>Tags</h1>
+      <h3>All Tags</h3>
       <ul>
         {group.map((tag: { fieldValue: string; totalCount: number }) => (
           <li key={tag.fieldValue}>

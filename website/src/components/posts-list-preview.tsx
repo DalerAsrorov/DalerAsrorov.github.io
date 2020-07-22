@@ -1,7 +1,7 @@
-import { css } from '@emotion/core'
-import { graphql, Link, StaticQuery } from 'gatsby'
-import React from 'react'
-import { rhythm } from '../utils/typography'
+import { css } from '@emotion/core';
+import { graphql, Link, StaticQuery } from 'gatsby';
+import React from 'react';
+import { rhythm } from '../utils/typography';
 
 const PostsListPreview = () => (
   <StaticQuery
@@ -25,39 +25,46 @@ const PostsListPreview = () => (
         }
       }
     `}
-    render={data => (
-      <>
-        <h5>{data.allMarkdownRemark.totalCount} Posts Total</h5>
-        {data.allMarkdownRemark.edges.map(({ node }: any) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}
-              css={css`
-                text-decoration: none;
-                color: inherit;
-              `}
-            >
-              <h3
+    render={data => {
+      const { totalCount } = data.allMarkdownRemark;
+      const pageHeader = `${totalCount} post${
+        totalCount === 1 ? '' : 's'
+      } total`;
+
+      return (
+        <>
+          <h5>{pageHeader}</h5>
+          {data.allMarkdownRemark.edges.map(({ node }: any) => (
+            <div key={node.id}>
+              <Link
+                to={node.fields.slug}
                 css={css`
-                  margin-bottom: ${rhythm(1 / 4)};
+                  text-decoration: none;
+                  color: inherit;
                 `}
               >
-                {node.frontmatter.title}{' '}
-                <span
+                <h3
                   css={css`
-                    color: #bbb;
+                    margin-bottom: ${rhythm(1 / 4)};
                   `}
                 >
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p>{node.excerpt}</p>
-            </Link>
-          </div>
-        ))}
-      </>
-    )}
+                  {node.frontmatter.title}{' '}
+                  <span
+                    css={css`
+                      color: #bbb;
+                    `}
+                  >
+                    — {node.frontmatter.date}
+                  </span>
+                </h3>
+                <p>{node.excerpt}</p>
+              </Link>
+            </div>
+          ))}
+        </>
+      );
+    }}
   />
-)
+);
 
-export default PostsListPreview
+export default PostsListPreview;
