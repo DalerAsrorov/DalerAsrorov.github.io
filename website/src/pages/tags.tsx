@@ -14,30 +14,29 @@ const TagsPage: React.FC<PageProps<{
       siteMetadata: { title },
     },
   },
-}: any) => {
-  return (
-    <Layout>
-      <SEO
-        title={title}
-        description="List of all tags in dalerasrorov.com"
-        keywords={group}
-        pathname={location.pathname}
-      />
-      <div>
-        <h1>Tags</h1>
-        <ul>
-          {group.map((tag: { fieldValue: string; totalCount: number }) => (
-            <li key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Layout>
-  );
-};
+  location,
+}: any) => (
+  <Layout>
+    <SEO
+      title={title}
+      description="List of all tags in dalerasrorov.com"
+      keywords={group}
+      pathname={location.pathname}
+    />
+    <div>
+      <h1>Tags</h1>
+      <ul>
+        {group.map((tag: { fieldValue: string; totalCount: number }) => (
+          <li key={tag.fieldValue}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              {tag.fieldValue} ({tag.totalCount})
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Layout>
+);
 
 export const pageQuery = graphql`
   query {
