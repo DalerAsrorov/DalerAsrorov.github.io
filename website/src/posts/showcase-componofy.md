@@ -1,5 +1,6 @@
 ---
 title: 'Project Showcase - Componofy'
+tags: ['technical', 'javascript', 'react', 'node', 'Spotify']
 date: '2020-07-01'
 featuredImage: ../images/componofy-preview.png
 ---

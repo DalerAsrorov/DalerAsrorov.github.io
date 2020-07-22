@@ -1,16 +1,17 @@
-import { css } from '@emotion/core'
-import { graphql, PageProps } from 'gatsby'
-import Img from 'gatsby-image'
-import React from 'react'
-import Layout from '../components/layout'
-import { SEO } from '../components/seo'
+import { css } from '@emotion/core';
+import { graphql, PageProps } from 'gatsby';
+import Img from 'gatsby-image';
+import React from 'react';
+import Layout from '../components/layout';
+import { SEO } from '../components/seo';
 
 const BlogPost: React.FC<PageProps<{ markdownRemark: any }>> = ({
   data,
   location,
 }) => {
-  const post = data.markdownRemark
-  const featuredImgFluid = post.frontmatter.featuredImage?.childImageSharp.fluid
+  const post = data.markdownRemark;
+  const featuredImgFluid =
+    post.frontmatter.featuredImage?.childImageSharp.fluid;
 
   return (
     <Layout>
@@ -33,10 +34,10 @@ const BlogPost: React.FC<PageProps<{ markdownRemark: any }>> = ({
       <p css={css('color: hotpink')}>{post.frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
-  )
-}
+  );
+};
 
-export const query = graphql`
+export const pageQuery = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
@@ -53,6 +54,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default BlogPost
+export default BlogPost;
