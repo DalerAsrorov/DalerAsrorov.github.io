@@ -46,6 +46,7 @@ const Tags: React.FC<PageProps<TagsPageDataProps, TagsPageContextProps>> = ({
               slug={node.fields.slug}
               title={node.frontmatter.title}
               date={node.frontmatter.date}
+              tags={node.frontmatter.tags}
               excerpt={node.excerpt}
             />
           );
@@ -72,6 +73,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            tags
           }
           excerpt
         }

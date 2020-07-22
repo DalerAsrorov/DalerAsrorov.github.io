@@ -28,7 +28,7 @@ export const BlogPostPreview: React.FC<IBlogPostPreviewProps> = props => {
       >
         <h3
           css={css`
-            margin-bottom: ${rhythm(1 / 4)};
+            margin-bottom: ${rhythm(1 / 2)};
             &:hover {
               color: #1ca086;
             }
@@ -50,8 +50,8 @@ export const BlogPostPreview: React.FC<IBlogPostPreviewProps> = props => {
         >
           {props.excerpt}
         </p>
-        <TagsList tags={props.tags} />
       </Link>
+      <TagsList tags={props.tags} />
     </div>
   );
 };
