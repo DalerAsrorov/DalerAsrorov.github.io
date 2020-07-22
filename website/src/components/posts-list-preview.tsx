@@ -16,6 +16,7 @@ const PostsListPreview = () => (
               frontmatter {
                 title
                 date(formatString: "DD MMMM, YYYY")
+                tags
               }
               fields {
                 slug
@@ -34,13 +35,20 @@ const PostsListPreview = () => (
 
       return (
         <>
-          <h5>{pageHeader}</h5>
+          <h5
+            css={css`
+              margin-bottom: 0;
+            `}
+          >
+            {pageHeader}
+          </h5>
           {data.allMarkdownRemark.edges.map(({ node }: any) => (
             <BlogPostPreview
               key={node.id}
               slug={node.fields.slug}
               title={node.frontmatter.title}
               date={node.frontmatter.date}
+              tags={node.frontmatter.tags}
               excerpt={node.excerpt}
             />
           ))}

@@ -1,29 +1,11 @@
 import { css } from '@emotion/core';
-import { graphql, Link, PageProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import Img from 'gatsby-image';
-import kebabCase from 'lodash/kebabCase';
 import React from 'react';
 import Layout from '../components/layout';
 import { SEO } from '../components/seo';
+import { TagsList } from '../components/tags-list';
 import { rhythm } from '../utils/typography';
-
-const TagsList: React.FC<{ tags: string[] }> = ({ tags }) => {
-  return (
-    <ul css={css('list-style: none;')}>
-      {tags.map(tag => (
-        <li
-          css={css`
-            float: left;
-            margin: 0 0 0 ${rhythm(1 / 4)};
-          `}
-          key={tag}
-        >
-          <Link to={`/tags/${kebabCase(tag)}/`}>#{tag}</Link>
-        </li>
-      ))}
-    </ul>
-  );
-};
 
 export interface BlogPostDataProps {
   markdownRemark: {
