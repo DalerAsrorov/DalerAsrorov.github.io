@@ -29,6 +29,9 @@ export const BlogPostPreview: React.FC<IBlogPostPreviewProps> = props => {
         <h3
           css={css`
             margin-bottom: ${rhythm(1 / 4)};
+            &:hover {
+              color: #1ca086;
+            }
           `}
         >
           {props.title}{' '}
