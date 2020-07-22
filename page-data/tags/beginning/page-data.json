@@ -1,0 +1,1 @@
+{"componentChunkName":"component---src-templates-tags-tsx","path":"/tags/beginning/","result":{"data":{"allMarkdownRemark":{"totalCount":1,"edges":[{"node":{"fields":{"slug":"/first-post/"},"frontmatter":{"title":"My First Blog Post!"}}}]}},"pageContext":{"tag":"beginning"}}}
