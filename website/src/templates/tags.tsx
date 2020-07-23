@@ -3,6 +3,8 @@ import React from 'react';
 import Layout from '../components/layout';
 import { SEO } from '../components/seo';
 import { BlogPostPreview } from '../components/blog-post-preview';
+import { css } from '@emotion/core';
+import { rhythm } from '../utils/typography';
 
 export interface TagsPageDataProps {
   allMarkdownRemark: {
@@ -37,7 +39,17 @@ const Tags: React.FC<PageProps<TagsPageDataProps, TagsPageContextProps>> = ({
         pathname={pathName}
       />
       <h3>{tagHeader}</h3>
-      <Link to="/tags">All tags</Link>
+      <section>
+        <Link to="/tags">All tags</Link>
+        <Link
+          css={css`
+            margin-left: ${rhythm(1 / 4)};
+          `}
+          to="/"
+        >
+          All posts
+        </Link>
+      </section>
       <ul>
         {edges.map(({ node }: any) => {
           return (
