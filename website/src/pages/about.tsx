@@ -1,12 +1,12 @@
-import styled from '@emotion/styled'
-import { PageProps } from 'gatsby'
-import React from 'react'
-import { FaGithubAlt, FaLinkedin, FaSoundcloud } from 'react-icons/fa'
-import { IconBaseProps } from 'react-icons/lib/cjs'
-import Layout from '../components/layout'
-import { PlainList } from '../components/plain-list'
-import myPicture from '../images/me.jpg'
-import { rhythm } from '../utils/typography'
+import styled from '@emotion/styled';
+import { PageProps } from 'gatsby';
+import React from 'react';
+import { FaGithubAlt, FaLinkedin, FaSoundcloud } from 'react-icons/fa';
+import { IconBaseProps } from 'react-icons/lib/cjs';
+import Layout from '../components/layout';
+import { PlainList } from '../components/plain-list';
+import myPicture from '../images/me-min.jpg';
+import { rhythm } from '../utils/typography';
 
 const Container = styled.div`
   display: flex;
@@ -15,29 +15,29 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 
 const Card = styled.article`
   display: inline-block;
   align-items: center;
   margin: 0 ${rhythm(1)} ${rhythm(1)} 0;
   float: left;
-`
+`;
 
 const Image = styled.img`
   max-width: ${rhythm(8)};
   margin-bottom: ${rhythm(1 / 4)};
   border-radius: 50%;
   border: 2px solid hotpink;
-`
+`;
 
 interface IconWrapper extends IconBaseProps {
-  Icon: any
+  Icon: any;
 }
 
 const IconWrapper: React.FC<IconWrapper> = ({ Icon, ...restProps }) => (
   <Icon {...restProps} size={30} />
-)
+);
 
 const About: React.FC<PageProps> = () => {
   return (
@@ -71,7 +71,7 @@ const About: React.FC<PageProps> = () => {
         </p>
       </Container>
     </Layout>
-  )
-}
+  );
+};
 
-export default About
+export default About;
