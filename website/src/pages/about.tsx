@@ -55,10 +55,6 @@ const About: React.FC<PageProps> = () => {
                 content: <IconWrapper color="skyblue" Icon={FaLinkedin} />,
                 link: 'https://www.linkedin.com/in/dalerasrorov/',
               },
-              {
-                content: <IconWrapper color="orange" Icon={FaSoundcloud} />,
-                link: 'https://soundcloud.com/daler-asrorov',
-              },
             ]}
             isHorizontal={true}
           />
