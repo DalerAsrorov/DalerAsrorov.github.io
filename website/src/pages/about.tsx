@@ -5,7 +5,7 @@ import { FaGithubAlt, FaLinkedin, FaSoundcloud } from 'react-icons/fa';
 import { IconBaseProps } from 'react-icons/lib/cjs';
 import Layout from '../components/layout';
 import { PlainList } from '../components/plain-list';
-import myPicture from '../images/me-min.jpg';
+import myPicture from '../images/me.jpg';
 import { rhythm } from '../utils/typography';
 
 const Container = styled.div`
