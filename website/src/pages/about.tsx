@@ -23,27 +23,26 @@ const IconWrapper: React.FC<IconWrapper> = ({ Icon, ...restProps }) => (
 const About: React.FC<PageProps> = () => {
   return (
     <Layout>
-        <Card>
-          <PlainList
-            items={[
-              {
-                content: <IconWrapper color="black" Icon={FaGithubAlt} />,
-                link: 'https://github.com/DalerAsrorov',
-              },
-              {
-                content: <IconWrapper color="skyblue" Icon={FaLinkedin} />,
-                link: 'https://www.linkedin.com/in/dalerasrorov/',
-              },
-            ]}
-            isHorizontal={true}
-          />
-        </Card>
-        <p>
-          I am a software engineer currently working at Capital One and building
-          tools for commercial card platform. I have been working on side
-          projects on and off as a way to learn new technologies and found it to
-          be most useful way to understand complex concepts more thoroughly.
-        </p>
+      <Card>
+        <PlainList
+          items={[
+            {
+              content: <IconWrapper color="black" Icon={FaGithubAlt} />,
+              link: 'https://github.com/DalerAsrorov',
+            },
+            {
+              content: <IconWrapper color="skyblue" Icon={FaLinkedin} />,
+              link: 'https://www.linkedin.com/in/dalerasrorov/',
+            },
+          ]}
+          isHorizontal={true}
+        />
+      </Card>
+      <p>
+        I am a software engineer currently working at NVIDIA and building UI interfaces and components for <a target='_blank' href='https://www.nvidia.com/en-us/gpu-cloud/'>NGC</a>. I have been working on side
+        projects on and off as a way to learn new technologies and found it to
+        be most useful way to understand complex concepts more thoroughly.
+      </p>
     </Layout>
   );
 };
