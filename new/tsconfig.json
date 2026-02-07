@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": ["ES2024", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "target": "ESNext",
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "types": ["@remix-run/node", "vite/client"]
+  }
+}
